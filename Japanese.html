@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+           body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        section {
+            padding: 20px;
+            background: #fff;
+            margin: 20px 0;
+            border-radius: 3px;
+        }
+
+        .menu-item {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .menu-item img {
+            width: 100px;
+            height: 60px;
+            object-fit: cover;
+            margin-right: 15px;
+            border-radius: 5px;
+        }
+
+        .menu-item div {
+            flex: 1;
+        }
+
+        .menu-item h3 {
+            margin: 0;
+            color: #333;
+        }
+
+        .menu-item p {
+            margin: 5px 0 0;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        
+        .back-button {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            background: #555;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .back-button:hover {
+            background: #777;
+        }
+
+        .special-menu {
+            background-color: #e0f7fa;
+            border: 1px solid #b2ebf2;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .special-menu h2 {
+            color: #00796b;
+        }
+
+        .regular-rolls .menu-item {
+            flex-direction: row; 
+            align-items: center;
+        }
+
+        .regular-rolls .menu-item img {
+            margin-right: 15px; /
+        }
+
+        .regular-rolls .menu-item div {
+            flex: 1;
+        }
+
+        .regular-rolls h2 {
+            margin-top: 0;
+        }
+    </style>
+    <title>Japanese Cuisine - Diner 81</title>
+</head>
+<body>
+    <header>
+        <button class="back-button" onclick="window.location.href='allmenu.html';">Back</button>
+        <h1>Japanese Cuisine - Diner 81</h1>
+    </header>
+    
+    <section class="special-menu">
+        <div class="container">
+            <h2>Special Rolls:</h2>
+            <div class="menu-item">
+                <img src="rainbow.png" alt="Rainbow Roll">
+                <div>
+                    <h3>Rainbow</h3>
+                    <p>Crabstick, Avocado, and Cucumber Topped with Tuna, Salmon, Avocado, and Shrimp.<br><b>Price: $17.99</b></p>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="boston.png" alt="Boston Roll">
+                <div>
+                    <h3>Boston</h3>
+                    <p>Salmon and Avocado Topped with Masago and Shrimp.<br><b>Price: $17.99</b></p>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="boston-night.png" alt="Boston Night Roll">
+                <div>
+                    <h3>Boston Night</h3>
+                    <p>Tuna and Avocado Topped with Tobiko and Shrimp.<br><b>Price: $18.99</b></p>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="dragon.png" alt="Dragon Roll">
+                <div>
+                    <h3>Dragon</h3>
+                    <p>Shrimp Tempura, Crabstick, Avocado, and Cucumber Topped with Avocado, Eel, and Eel Sauce.<br><b>Price: $17.99</b></p>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="greendragon.png" alt="Green Dragon Roll">
+                <div>
+                    <h3>Green Dragon</h3>
+                    <p>Shrimp Tempura, Crabstick, Avocado, and Cucumber Topped with Avocado.<br><b>Price: $17.99</b></p>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="reddragon.png" alt="Red Dragon Roll">
+                <div>
+                    <h3>Red Dragon</h3>
+                    <p>Shrimp Tempura, Crabstick, Avocado, and Cucumber Topped with Avocado, Tuna, and Eel Sauce.<br><b>Price: $19.99</b></p>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="stay.png" alt="Crazy Dragon Roll">
+                <div>
+                    <h3>Crazy Dragon</h3>
+                    <p>Shrimp Tempura, Crabstick, Avocado, and Cucumber Topped with Avocado, Salmon, and Eel Sauce.<br><b>Price: $18.99</b></p>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="garlic-dragon.png" alt="Garlic Dragon Roll">
+                <div>
+                    <h3>Garlic Dragon</h3>
+                    <p>Shrimp Tempura, Crabstick, Avocado, and Cucumber Topped with Cream Cheese, Salmon, Garlic Mayo, Torched Crunch, Masago, Tobiko, Spicy Mayo, Eel Sauce, and Regular Mayo.<br><b>Price: $19.99</b></p>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="salmon-on-the-beach.png" alt="Salmon On the Beach Roll">
+                <div>
+                    <h3>Salmon On the Beach</h3>
+                    <p>Crabstick, Avocado, Cucumber, and Cream Cheese Topped with Salmon and Honey Sauce(torched).<br><b>Price: $17.99</b></p>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="saint.png" alt="Saint Roll">
+                <div>
+                    <h3>Saint</h3>
+                    <p>Crabstick, Avocado, and Cucumber (deep-fried) Topped with Cream Cheese, Spicy Crab Salad, Spicy Mayo, Eel Sauce, Regular Mayo, Crunch, Masago, and Tobiko.<br><b>Price: $15.99</b></p>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="stay.png" alt="Stephen Roll">
+                <div>
+                    <h3>Stephen</h3>
+                    <p>Shrimp Tempura, Crabstick, Avocado, and Cucumber (deep-fried) Topped with Cream Cheese, Spicy Mayo, Eel Sauce, Crunch, Masago, Tobiko, and Regular Mayo.<br><b>Price: $17.99</b></p>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="diner81.png" alt="Diner 81 Roll">
+                <div>
+                    <h3>Diner 81</h3>
+                    <p>Crabstick, Avocado, and Cucumber Topped with Cream Cheese, Spicy Salmon, Spicy Tuna, Crunch, Masago, Tobiko, Spicy Mayo, Eel Sauce, and Regular Mayo.<br><b>Price: $19.99</b></p>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="stay.png" alt="Diner 81 Roll">
+                <div>
+                    <h3>Volcano</h3>
+                    <p>Shrimp Tempura, Spicy Crab Salad, Fried Onions, and Cream Cheese Topped with Crabstick, Garlic Mayo, Torched Crunch, Eel Sauce, and Regular Mayo.<br><b>Price: $18.99</b></p>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="stay.png" alt="Diner 81 Roll">
+                <div>
+                    <h3>White Tiger</h3>
+                    <p>Shrimp Tempura, Spicy Crab Salad, Fried Onions, and Cream Cheese Topped with Crabstick, Garlic Mayo, Torched Crunch, Eel Sauce, and Mayo.<br><b>Price: $18.99</b></p>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="stay.png" alt="Diner 81 Roll">
+                <div>
+                    <h3>Chef's Special</h3>
+                    <p>Shrimp Tempura, Crabstick Tempura, Spicy Crab Salad, and Avocado Topped with Cream Cheese, Salmon, Torched Fried Onions, Masago, Tobiko, Spicy Mayo, Eel Sauce, and Regular Mayo.<br><b>Price: $20.99</b></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="koreanmenu">
+        <div class="container">
+            <h2>Regular Rolls:</h2>
+            <div class="menu-item">
+                <h3>Avocado</h3>
+                <p>Just Avocado<br><b>Price: $8.99</b></p>
+            </div>
+            <div class="menu-item">
+                <h3>Cucumber</h3>
+                <p>Stir-fried pork with rice choice of TERIYAKI or SPICY.<br><b>Price: $19.99</b><br><b>Extra Meat: $4.99</b><br><b>Extra Rice: $3.29</b></p>
+            </div>
+            <div class="menu-item">
+                <h3>California</h3>
+                <p>Crabstick, Avocado, and Cucumber.<br><b>Price: $8.99</b></p>
+            </div>
+            <div class="menu-item">
+                <h3>Spicy California</h3>
+                <p>Crabstick, Avocado, and Cucumber Topped with Spicy Mayo.<br><b>Price: $9.99</b></p>
+            </div>
+            <div class="menu-item">
+                <h3>Salmon</h3>
+                <p>Just Salmon.<br><b>Price: $9.99</b></p>
+            </div>
+            <div class="menu-item">
+                <h3>Spicy Salmon</h3>
+                <p>Spicy Salmon and Cucumber Topped with Spicy Mayo.<br><b>Price: $10.99</b></p>
+            </div>
+            <div class="menu-item">
+                <h3>Spicy Tuna</h3>
+                <p>Spicy Tuna and Cucumber Topped with Spicy Mayo.<br><b>Price: $12.99</b></p>
+            </div>
+            <div class="menu-item">
+                <h3>Crunch</h3>
+                <p>Crab Salad, Avocado, and Cucumber Topped with Fried Onions and Tobiko.<br><b>Price: $11.99</b></p>
+            </div>
+            <div class="menu-item">
+                <h3>Spicy Crab</h3>
+                <p>Spicy Crab Salad, Cucumber, and Avocado rolled in crunch Topped with Spicy Mayo.<br><b>Price: $10.99</b></p>
+            </div>
+            <div class="menu-item">
+                <h3>Dynamite</h3>
+                <p>Shrimp Tempura, Crabstick, Avocado, and Cucumber rolled in Crunch Topped with Eel Sauce, Tobiko, and Masago.<br><b>Price: $14.99</b></p>
+            </div>
+            <div class="menu-item">
+                <h3>Philadelphia</h3>
+                <p>Crabstick, Avocado, and Cucumber Topped with Cream Cheese and Smoked Salmon.<br><b>Price: $11.99</b></p>
+            </div>
+            <div class="menu-item">
+                <h3>Yam Tempura</h3>
+                <p>Tempura Sweet Potato and Avocado Topped with Tempura Sweet Potato and Eel Sauce.<br><b>Price: $11.99</b></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="Nigiri">
+        <div class="container">
+            <h2>Nigiri:</h2>
+            <div class="menu-item">
+                <h3>Salmon(2 Pieces)</h3>
+                <p><b>Price: $5.99</b></p>
+            </div>
+            <div class="menu-item">
+                <h3>Tuna(2 Pieces)</h3>
+                <p><b>Price: $6.99</b></p>
+            </div>
+            <div class="menu-item">
+                <h3>Eel(2 Pieces)</h3>
+                <p><b>Price: $6.99</b></p>
+            </div>
+            <div class="menu-item">
+                <h3>Crabstick(2 Pieces)</h3>
+                <p><b>Price: $4.99</b></p>
+            </div>
+            <div class="menu-item">
+                <h3>Shrimp(2 Pieces)</h3>
+                <p><b>Price: $5.99</b></p>
+            </div>
+            <div class="menu-item">
+                <h3>Tamago(2 Pieces)</h3>
+                <p><b>Price: $4.99</b></p>
+            </div>
+            <div class="menu-item">
+                <h3>Inari(2 Pieces)</h3>
+                <p><b>Price: $4.99</b></p>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section id="Party">
+        <div class="container">
+            <h2>Party Trays:</h2>
+            <div class="menu-item">
+                <h3>Party Tray A</h3>
+                <p>(Total of 40 Pieces). 8 Pieces of Nigiri(4 Salmon, 2 Tuna, 2 Shrimp, 2 Tamago), Avocado Roll, Salmon Roll, California Roll, Dynamite Roll.<br><b>Price: $59.99</b></p>
+            </div>
+            <div class="menu-item">
+                <h3>Party Tray B</h3>
+                <p>(Total of 48 Pieces). 16 Pieces of Nigiri(4 Salmon, 2 Tuna, 2 Eel, 2 Shrimp, 2 Crabstick, 2 Inari, 2 Tamago), Salmon Roll, California Roll, Dynamite Roll, Crunch Roll.<br><b>Price: $84.99</b></p>
+            </div>
+            <div class="menu-item">
+                <h3>Party Tray C</h3>
+                <p>(Total of 64 Pieces). Avocado Roll, Salmon Roll, California Roll, Crunch Roll, Yam Tempura Roll, Dynamite Roll, Crazy Dragon, Saint Roll.<br><b>Price: $95.99</b></p>
+            </div>
+            <div class="menu-item">
+                <h3>Party Tray D</h3>
+                <p>(Total of 80 Pieces). Avocado Roll, Salmon Roll, California Roll, Spicy Tuna Roll, Spicy Crab Roll, Dynamite Roll, Philadelphia Roll, Yam Tempura Roll, Crazy Dragon Roll, Stephen Roll.<br><b>Price: $119.99</b></p>
+            </div>
+            </div>
+    </section>
+            
+    <footer>
+        <p>&copy; 2024 Diner 81. All rights reserved.</p>
+    </footer>
+    </body>
+</html>
+
+            
+

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        section {
+            padding: 20px;
+            background: #fff;
+            margin: 20px 0;
+            border-radius: 3px;
+        }
+
+        .menu-item {
+            margin-bottom: 20px;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        
+        .back-button {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            background: #555;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .back-button:hover {
+            background: #777;
+        }
+
+        .menu-item h3 {
+            margin: 0;
+            color: #333;
+        }
+
+        .menu-item p {
+            margin: 10px 0 0;
+            color: #666;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+    <title>Diner 81 - Menu</title>
+</head>
+<body>
+    <header>
+        <button class="back-button" onclick="window.location.href='Diner81.html';">Back</button>
+        <h1>Diner 81 - Menu</h1>
+    </header>
+    
+    <section id="allmenu">
+        <div class="container">
+            <h2>Menu List:</h2>
+            <div class="menu-item">
+                <h3><i><a href=Korean.html> Korean Cuisine</a></i></h3>
+                <p>Explore the vibrant flavours of Korea with dishes like Korean-BBQ, Bibimbap, Ramyun, and more. Each dish is made using Diner 81's own recipes and fresh ingredients.</p>
+            </div>
+            <div class="menu-item">
+                <h3><i><a href=Japanese.html>Japanese Cuisine</a></i></h3>
+                <p>Savour the best of Japan with Sushi, Rolls, and so on. Our Japanese dishes are a blend of classic and contemporary flavours.</p>
+            </div>
+            <div class="menu-item">
+                <h3><i><a href=Canadian.html>Canadian Cuisine</a></i></h3>
+                <p>Indulge in hearty Canadian classics, from our favourite Subs to Hamburgers, made with fresh ingredients and a little bit of retouch.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 'Diner 81'. All rights reserved.</p>
+    </footer>
+</body>
+</html>
