@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        @keyframes fadeIn {
+@keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
@@ -35,7 +35,7 @@ section {
             position: relative;
             z-index: 1000; 
         }
-         h1 {
+        h1 {
             font-family: Verdana, Geneva, Tahoma, sans-serif
         }
         nav {
@@ -52,7 +52,7 @@ section {
         nav ul li {
             margin: 0 15px;
         }
-       nav ul li a {
+        nav ul li a {
             color: #fff;
             text-decoration: none;
             font-size: 1.2em;
@@ -64,7 +64,7 @@ section {
             background-color: rgba(255, 255, 255, 0.1); 
             border-radius: 100px; 
             padding: 20px; 
-        }   
+        }
         .social-media {
             position: absolute;
             right: 10px;
@@ -80,6 +80,53 @@ section {
         }
         .social-media i {
             font-size: 1.5em;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: #ddd;
+        }
+        #terms-and-conditions {
+            padding: 15px;
+            background-color: #f9f9f9;
+            color: #333;
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 280px;
+            max-height: 400px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 0.9em; /* Smaller font size */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000; /* Ensure it appears on top of other content */
+        }
+        #terms-and-conditions h2 {
+            color: #333;
+            font-size: 1.2em;
+        }
+        #terms-and-conditions p, 
+        #terms-and-conditions ul {
+            margin: 10px 0;
+        }
+        #terms-and-conditions ul {
+            padding-left: 20px;
+        }
+        #terms-and-conditions ul li {
+            margin-bottom: 10px;
         }
     </style>
     <title>Diner 81</title>
@@ -98,6 +145,7 @@ section {
                     <li><a href="#bestmenu">Must Try!</a></li>
                     <li><a href="allmenu.html">All Menu</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li><a href="review.html">Reviews</a></li>
                 </ul>
                 <div class="social-media">
                     <a href="https://www.facebook.com/jaceyandmarry?mibextid=ZbWKwL" target="_blank" title="Follow us on Facebook">
@@ -153,12 +201,11 @@ section {
     
     <footer>
         <div class="container">
-            <footer>
-    <div class="container">
-        <p>&copy; 2024 'Diner 81'. All rights reserved.</p>
-        <p>CEO: Jayce Lee & Marry Kim</p>
-        <p>Website in Charge: Joonyeong Lee</p>
-    </div>
+            <p>&copy; 2024 'Diner 81'. All rights reserved.</p> 
+            <p>
+                <a href="termsandconditions.html">Terms and Conditions</a>
+            </p>
+        </div>
     </footer>
 </body>
 </html>
