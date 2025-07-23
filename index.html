@@ -3,142 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-.main-image {
-    animation: fadeIn 2s ease-in-out;
-}
-
-@keyframes slideIn {
-    from { transform: translateY(20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
-
-section {
-    animation: slideIn 1s ease-out;
-}
-        .main-image {
-            width: 100%;
-            height: auto;
-            margin-top: 20px;
-            display: block;
-            border-radius: 3px;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 10px 0;
-            position: relative;
-            z-index: 1000; 
-        }
-        h1 {
-            font-family: Verdana, Geneva, Tahoma, sans-serif
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-        nav ul li {
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1.2em;
-            transition: transform 0.3s ease, color 0.3s ease;
-        }
-        nav ul li a:hover {
-            color: #ddd;
-            transform: scale(1.2);
-            background-color: rgba(255, 255, 255, 0.1); 
-            border-radius: 100px; 
-            padding: 20px; 
-        }
-        .social-media {
-            position: absolute;
-            right: 10px;
-            bottom: 10px;
-        }
-        .social-media a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1.5em;
-        }
-        .social-media a:hover {
-            color: #ddd;
-        }
-        .social-media i {
-            font-size: 1.5em;
-        }
-        footer {
-            background: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        footer .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        footer a {
-            color: #fff;
-            text-decoration: none;
-        }
-        footer a:hover {
-            color: #ddd;
-        }
-        #terms-and-conditions {
-            padding: 15px;
-            background-color: #f9f9f9;
-            color: #333;
-            position: fixed;
-            right: 20px;
-            bottom: 20px;
-            width: 280px;
-            max-height: 400px;
-            overflow-y: auto;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 0.9em;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            z-index: 1000; 
-        }
-        #terms-and-conditions h2 {
-            color: #333;
-            font-size: 1.2em;
-        }
-        #terms-and-conditions p, 
-        #terms-and-conditions ul {
-            margin: 10px 0;
-        }
-        #terms-and-conditions ul {
-            padding-left: 20px;
-        }
-        #terms-and-conditions ul li {
-            margin-bottom: 10px;
-        }
-    </style>
     <title>Diner 81</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7088004406373193"
-    crossorigin="anonymous"></script>
-    <ins class="kakao_ad_area" style="display:none;"
-data-ad-unit = "DAN-k7oSjsqIoObZCnBs"
-data-ad-width = "728"
-data-ad-height = "90"></ins>
-<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+    crossorigin="anonymous"></script>    
 </head>
 <body>
     <header>
@@ -150,7 +19,7 @@ data-ad-height = "90"></ins>
                     <li><a href="#bestmenu">Must Try!</a></li>
                     <li><a href="allmenu.html">All Menu</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="review.html">Reviews</a></li>
+
                 </ul>
                 <div class="social-media">
                     <a href="https://www.facebook.com/jaceyandmarry?mibextid=ZbWKwL" target="_blank" title="Follow us on Facebook">
@@ -161,12 +30,12 @@ data-ad-height = "90"></ins>
         </div>
     </header>
     
-     <section id="about">
+    <section id="about">
         <div class="container">
             <h2>Welcome to Diner 81</h2>
             <img src="main page.png" class="main-image">
             <p>Diner 81 has always been a go-to spot for delicious Korean, Japanese, and local Canadian dishes. We can assure you that Diner 81 always uses the freshest ingredients  because customers’ satisfaction is Diner 81’s top priority. On top of this, Diner 81’s cozy atmosphere and friendly staff make every meal a special experience for everyone.I hope to see you at Diner 81 soon! Come and try for yourself!
-                </p>
+            </p>
             <br>
             <p>Diner 81 a toujours été un lieu de prédilection pour de délicieux plats coréens, japonais et canadiens locaux. Nous vous assurons que Diner 81 utilise toujours des ingrédients frais, car la satisfaction des clients est la priorité absolue de Diner 81. De plus, l’atmosphère chaleureuse de Diner 81 et le personnel sympathique rendent chaque repas spécial pour tout le monde. Nous espérons vous voir bientôt chez Diner 81 ! Venez essayer par vous-même!</p>
         </div>
@@ -195,22 +64,34 @@ data-ad-height = "90"></ins>
     </section>
     
     <section id="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>124 King Street, Saint Stephen, NB, Canada (E3L2C5) </p>
-            <p>Email: <a href="mailto:jaceymarry@gmail.com">jaceymarry@gmail.com</a></p>
-            <p>Phone: +1(506)-466-2223 </p>
-            <p><a href="https://www.google.com/maps/dir/?api=1&destination=124+King+Street,+Saint+Stephen,+NB,+Canada" target="_blank">Get Directions</a></p>
-            <iframe src="https://www.google.com/maps/embed?pb=YOUR_EMBED_CODE_HERE" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-    </section>
+    <div class="container">
+        <h2>Contact Us</h2>
+        <p>124 King Street, Saint Stephen, NB, Canada (E3L2C5)</p>
+        <p>Phone: +1(506)-466-2223</p>
+        <p><a href="https://www.google.com/maps/dir/?api=1&destination=124+King+Street,+Saint+Stephen,+NB,+Canada" target="_blank">Get Directions</a></p>
+        <div id="map" style="height: 400px; width: 100%; border-radius:10px; margin-top:20px;"></div>
+    </div>
+</section>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script>
+    var dinerCoords = [45.19771, -67.27468];
+    var map = L.map('map').setView(dinerCoords, 17);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    L.marker(dinerCoords).addTo(map)
+        .bindPopup("<b>Diner 81</b><br>124 King Street, Saint Stephen<br><a target='_blank' href='https://www.google.com/maps/dir/?api=1&destination=45.19771,-67.27468'>Find Location</a>")
+        .openPopup();
+</script>
+
     
     <footer>
         <div class="container">
-            <p>&copy; 2024 'Diner 81'. All rights reserved.</p> 
-            <p>
-                <a href="termsandconditions.html">Terms and Conditions</a>
-            </p>
+            <p>&copy; 2024 Diner 81. All rights reserved.</p>
+            <p><a href="termsandconditions.html">Terms and Conditions</a></p>
         </div>
     </footer>
 </body>
