@@ -1,102 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diner 81</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7088004406373193"
-    crossorigin="anonymous"></script>    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms and Conditions - Diner 81</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* 전체 레이아웃 */
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8f8f8;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* 헤더 */
+    header {
+      background: linear-gradient(135deg, #2c2c2c, #444);
+      color: #fff;
+      padding: 1.5rem 0;
+      position: relative;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+    }
+
+    header h1 {
+      text-align: center;
+      margin: 0;
+      font-size: 2.2rem;
+      letter-spacing: 1px;
+    }
+
+    .back-button {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #555;
+      color: #fff;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .back-button:hover { background: #777; }
+
+    /* 메인 컨테이너 */
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 20px;
+      flex: 1;
+    }
+
+    /* 카드형 본문 */
+    .content {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #444;
+    }
+
+    /* 제목 스타일 */
+    h2 {
+      color: #222;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.5rem;
+    }
+    h3 {
+      margin-top: 1.5rem;
+      color: #333;
+      font-size: 1.4rem;
+    }
+    h4 {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    /* 리스트 */
+    ul {
+      padding-left: 20px;
+      margin: 0.5rem 0;
+    }
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* 구분선 */
+    .divider {
+      border-top: 2px dashed #ccc;
+      margin: 2rem 0;
+    }
+
+    /* 링크 */
+    a { color: #222; text-decoration: none; font-weight: 600; }
+    a:hover { color: #c8ff00; }
+
+    /* 푸터 */
+    footer {
+      background: #222;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1rem;
+      margin-top: auto;
+    }
+    footer a {
+      color: #ffd700;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    footer a:hover { text-decoration: underline; }
+  </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <h1>Diner 81</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#bestmenu">Must Try!</a></li>
-                    <li><a href="allmenu.html">All Menu</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <div class="social-media">
-                    <a href="https://www.facebook.com/jaceyandmarry?mibextid=ZbWKwL" target="_blank" title="Follow us on Facebook">
-                        <i class="fab fa-facebook"></i>
-                    </a>
-                </div>
-            </nav>
-        </div>
-    </header>
-    
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2>Welcome to Diner 81</h2>
-            <img src="main-page.png" class="main-image" alt="Main Diner 81">
-            <p>Diner 81 has always been a go-to spot for delicious Korean, Japanese, and local Canadian dishes. We can assure you that Diner 81 always uses the freshest ingredients because customers’ satisfaction is Diner 81’s top priority. On top of this, Diner 81’s cozy atmosphere and friendly staff make every meal a special experience for everyone. We hope to see you at Diner 81 soon! Come and try for yourself!
-            </p>
-            <br>
-            <p>Diner 81 a toujours été un lieu de prédilection pour de délicieux plats coréens, japonais et canadiens locaux. Nous vous assurons que Diner 81 utilise toujours des ingrédients frais, car la satisfaction des clients est la priorité absolue de Diner 81. De plus, l’atmosphère chaleureuse de Diner 81 et le personnel sympathique rendent chaque repas spécial pour tout le monde. Nous espérons vous voir bientôt chez Diner 81 ! Venez essayer par vous-même!</p>
-        </div>
-    </section>
-    
-    <!-- Must Try Menu Section -->
-    <section id="bestmenu">
-        <div class="container">
-            <h2>Must Try!</h2>
-            <div class="menu-item">
-                <h3>Smoked Meat & Cheese Sub</h3>
-                <p>Montreal Smoked Meat, Jack Cheese and Mustard.</p>
-                <p>6" for <b>$7.99</b> / 12" for <b>$13.99</b></p>
-            </div>
-            <div class="menu-item">
-                <h3>Popcorn Chicken</h3>
-                <p>Deep fried chicken coated with home-made Korean sweet & spicy sauce.</p>
-                <p>Small Size for <b>$13.99</b> / Large Size for <b>$18.99</b></p>
-                <p>Add Salad for <b>$3.29</b> <br> Add Rice for <b>$3.29</b></p>
-            </div>
-            <div class="menu-item">
-                <h3>Dynamite Rolls</h3>
-                <p>Shrimp Tempura, Crabstick, Avocado, and Cucumber rolled in crunch topped with Eel sauce, Tobiko, and Masago.</p>
-                <p>Price: <b>$14.99</b></p>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>124 King Street, Saint Stephen, NB, Canada (E3L2C5)</p>
-            <p>Phone: +1(506)-466-2223</p>
-            <p><a href="https://www.google.com/maps/dir/?api=1&destination=124+King+Street,+Saint+Stephen,+NB,+Canada" target="_blank">Get Directions</a></p>
-            <div id="map" style="height: 400px; width: 100%; border-radius:10px; margin-top:20px;"></div>
-        </div>
-    </section>
+  <header>
+    <button class="back-button" onclick="window.location.href='index.html';">← Back</button>
+    <h1>Diner 81 - Terms & Conditions</h1>
+  </header>
 
-    <!-- Leaflet Map -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <div class="container">
+    <div class="content">
+      <h2>Terms and Conditions</h2>
+      <p>Welcome to <a href="https://diner81.com" target="_blank">diner81.com</a>! By visiting our website, you agree to comply with the following Terms and Conditions:</p>
+      
+      <h3>Acceptance of Terms</h3>
+      <p>By accessing or using <a href="https://diner81.com" target="_blank">diner81.com</a>, you agree to these Terms. If you do not agree, please discontinue using our website and services.</p>
+      
+      <h3>Modifications</h3>
+      <p>Diner 81 reserves the right to update these Terms at any time. Changes take effect immediately upon posting on our website. Continued use signifies acceptance of the updated Terms.</p>
+      
+      <h3>Use of the Website</h3>
+      <h4>Prohibited Activities</h4>
+      <ul>
+        <li>Sharing our content on defamatory, obscene, or offensive platforms.</li>
+        <li>Attempting unauthorized access to any part of the website.</li>
+        <li>Using the website in any way that may harm, disable, or impair its functionality.</li>
+      </ul>
+      
+      <h3>Intellectual Property</h3>
+      <p>All content on <a href="https://diner81.com" target="_blank">diner81.com</a>, including text, images, and logos, belongs to Diner 81 and is protected by copyright and intellectual property laws.</p>
+      
+      <h3>Contact Us</h3>
+      <p>For questions or concerns, please contact:</p>
+      <p>
+        Joonyeong Lee<br>
+        Seoul, South Korea<br>
+        Email: <a href="mailto:jyl030409@gmail.com">jyl030409@gmail.com</a><br>
+        Phone: +82(10)-5813-5172
+      </p>
 
-    <script>
-        var dinerCoords = [45.19771, -67.27468];
-        var map = L.map('map').setView(dinerCoords, 17);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
-        }).addTo(map);
-        L.marker(dinerCoords).addTo(map)
-            .bindPopup("<b>Diner 81</b><br>124 King Street, Saint Stephen<br><a target='_blank' href='https://www.google.com/maps/dir/?api=1&destination=45.19771,-67.27468'>Find Location</a>")
-            .openPopup();
-    </script>
+      <div class="divider"></div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Diner 81. All rights reserved.</p>
-            <p><a href="termsandconditions.html">Terms and Conditions</a></p>
-        </div>
-    </footer>
+      <h2>Conditions Générales</h2>
+      <p>Bienvenue sur <a href="https://diner81.com" target="_blank">diner81.com</a> ! En visitant notre site, vous acceptez les conditions générales suivantes :</p>
+      
+      <h3>Acceptation des Conditions</h3>
+      <p>En accédant ou en utilisant notre site, vous acceptez ces conditions générales. Si vous n’êtes pas d’accord, veuillez cesser d’utiliser notre site.</p>
+      
+      <h3>Modifications</h3>
+      <p>Diner 81 se réserve le droit de modifier ces conditions à tout moment. Les changements prennent effet immédiatement après leur publication.</p>
+      
+      <h3>Utilisation du Site</h3>
+      <h4>Activités Interdites</h4>
+      <ul>
+        <li>Partager notre contenu sur des plateformes diffamatoires ou offensantes.</li>
+        <li>Tenter un accès non autorisé à une partie du site.</li>
+        <li>Utiliser le site d'une manière nuisible ou perturbatrice.</li>
+      </ul>
+      
+      <h3>Propriété Intellectuelle</h3>
+      <p>Tous les contenus du site sont la propriété de Diner 81 et protégés par les lois sur la propriété intellectuelle.</p>
+      
+      <h3>Contact</h3>
+      <p>Pour toute question :</p>
+      <p>
+        Joonyeong Lee<br>
+        Séoul, Corée du Sud<br>
+        Email : <a href="mailto:jyl030409@gmail.com">jyl030409@gmail.com</a><br>
+        Téléphone : +82(10)-5813-5172
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Diner 81. All rights reserved. | <a href="index.html">Back to Home</a></p>
+  </footer>
 </body>
 </html>
