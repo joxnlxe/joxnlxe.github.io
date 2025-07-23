@@ -1,121 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diner 81 - Menu Board</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f8f8;
+      color: #333;
+    }
 
-        header {
-            background: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-            position: relative;
-        }
+    header {
+      background: linear-gradient(135deg, #2c2c2c, #444);
+      color: #fff;
+      padding: 1.5rem 0;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+    }
 
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
+    .back-button {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #555;
+      color: #fff;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .back-button:hover {
+      background: #777;
+    }
 
-        section {
-            padding: 20px;
-            background: #fff;
-            margin: 20px 0;
-            border-radius: 3px;
-        }
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin: 2rem auto;
+    }
 
-        .menu-item {
-            margin-bottom: 20px;
-            text-align: center;
-        }
+    .menu-section-title {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      color: #444;
+      font-weight: 600;
+    }
 
-        .menu-item img {
-            max-width: 70%; 
-            height: auto;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin: 0 auto; 
-}
+    .menu-item {
+      background: #fff;
+      padding: 1rem;
+      margin-bottom: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-        .back-button {
-            position: absolute;
-            left: 10px;
-            top: 10px;
-            background: #555;
-            color: #fff;
-            border: none;
-            padding: 5px 10px;
-            border-radius: 3px;
-            cursor: pointer;
-        }
+    .menu-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
 
-        .back-button:hover {
-            background: #777;
-        }
+    .menu-item img {
+      width: 100%;
+      border-radius: 8px;
+      display: block;
+    }
 
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
-    <title>Diner 81 - Menu Board</title>
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <button class="back-button" onclick="window.location.href='allmenu.html';">Back</button>
-        <h1>Menu Board - Diner 81</h1>
-    </header>
+  <header>
+    <button class="back-button" onclick="window.location.href='allmenu.html';">← Back</button>
+    <h1>Menu Board - Diner 81</h1>
+  </header>
 
-    <section class="container">
-        <div class="menu-item">
-            <img src="1Cover.jpeg" alt="Menu Item 1">
-        </div>
-        <div class="menu-item">
-            <img src="2DINNERS & Seafood.jpg" alt="Menu Item 2">
-        </div>
-        <div class="menu-item">
-            <img src="3Burgers.jpg" alt="Menu Item 3">
-        </div>
-        <div class="menu-item">
-            <img src="4Appet.jpeg" alt="Menu Item 3">
-        </div>
-        <div class="menu-item">
-            <img src="5Sen.jpeg" alt="Menu Item 3">
-        </div>
-        <div class="menu-item">
-            <img src="6Sub.jpeg" alt="Menu Item 3">
-        </div>
-        <div class="menu-item">
-            <img src="7Korean.jpeg" alt="Menu Item 3">
-        </div>
-        <div class="menu-item">
-            <img src="8Sushi 1.jpg" alt="Menu Item 3">
-        </div>
-        <div class="menu-item">
-            <img src="9Sushi 2.jpg" alt="Menu Item 3">
-        </div>
-        <div class="menu-item">
-            <img src="10Sushi 3.jpg" alt="Menu Item 3">
-        </div>
-     
-    </section>
+  <div class="container">
+    <div class="menu-item"><img src="1Cover.jpeg" alt="Menu Cover"></div>
+    <div class="menu-item"><img src="2DINNERS & Seafood.jpg" alt="Dinners & Seafood"></div>
+    <div class="menu-item"><img src="3Burgers.jpg" alt="Burgers"></div>
+    <div class="menu-item"><img src="4Appet.jpeg" alt="Appetizers"></div>
+    <div class="menu-item"><img src="5Sen.jpeg" alt="Seniors Menu"></div>
+    <div class="menu-item"><img src="6Sub.jpeg" alt="Subs"></div>
+    <div class="menu-item"><img src="7Korean.jpeg" alt="Korean Dishes"></div>
+    <div class="menu-item"><img src="8Sushi 1.jpg" alt="Sushi 1"></div>
+    <div class="menu-item"><img src="9Sushi 2.jpg" alt="Sushi 2"></div>
+    <div class="menu-item"><img src="10Sushi 3.jpg" alt="Sushi 3"></div>
+  </div>
 
-    <footer>
-        <p>&copy; 2024 'Diner 81'. All rights reserved.</p>
-    </footer>
+  <footer>
+    <p>&copy; 2024 Diner 81. All rights reserved.</p>
+  </footer>
 </body>
 </html>
