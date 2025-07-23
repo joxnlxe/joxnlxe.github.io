@@ -1,113 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-
-        section {
-            padding: 20px;
-            background: #fff;
-            margin: 20px 0;
-            border-radius: 3px;
-        }
-
-        .menu-item {
-            margin-bottom: 20px;
-            padding: 10px;
-            border-bottom: 1px solid #ccc;
-        }
-        
-        .back-button {
-            position: absolute;
-            left: 10px;
-            top: 10px;
-            background: #555;
-            color: #fff;
-            border: none;
-            padding: 5px 10px;
-            border-radius: 3px;
-            cursor: pointer;
-        }
-
-        .back-button:hover {
-            background: #777;
-        }
-
-        .menu-item h3 {
-            margin: 0;
-            color: #333;
-        }
-
-        .menu-item p {
-            margin: 10px 0 0;
-            color: #666;
-        }
-
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
-    <title>Diner 81 - Menu</title>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7088004406373193"
-     crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diner 81 - Menu</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .menu-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin: 1rem 0;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <button class="back-button" onclick="window.location.href='Diner81.html';">Back</button>
-        <h1>Diner 81 - Menu</h1>
-    </header>
-    
-    <section id="allmenu">
-        <div class="container">
-            <h2>Menu List:</h2>
-            <div class="menu-item">
-                <h3><i><a href=Canadian.html>Canadian Cuisine</a></i></h3>
-                <p>Indulge in hearty Canadian classics, from our favourite Subs to Hamburgers, made with fresh ingredients and a little bit of retouch.</p>
-            </div>
-            <div class="menu-item">
-                <h3><i><a href=Korean.html> Korean Cuisine</a></i></h3>
-                <p>Explore the vibrant flavours of Korea with dishes like Korean-BBQ, Bibimbap, Ramyun, and more. Each dish is made using Diner 81's own recipes and fresh ingredients.</p>
-            </div>
-            <div class="menu-item">
-                <h3><i><a href=Japanese.html>Japanese Cuisine</a></i></h3>
-                <p>Savour the best of Japan with Sushi, Rolls, and so on. Our Japanese dishes are a blend of classic and contemporary flavours.</p>
-            </div>
-            <div class="menu-item">
-                <h3><i><a href=menuboard.html>All Menu</a></i></h3>
-                <p>If you would like to see the whole menu board, click here!</p>
-            </div>
-        </div>
-    </section>
+  <header class="menu-header">
+    <button class="back-button" onclick="window.location.href='Diner81.html';">← Back</button>
+    <h1>Diner 81 - Menu</h1>
+  </header>
+<main>
+  <section class="menu-section">
+    <div class="container">
+      <h2>Explore Our Menus</h2>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <h3><img src="https://flagcdn.com/32x24/ca.png" alt="Canada Flag" class="flag-icon"> Canadian Cuisine</h3>
+          <img src="burger_1.png" alt="Canadian Burger" class="menu-image">
 
-    <footer>
-        <p>&copy; 2024 'Diner 81'. All rights reserved.</p>
-    </footer>
+          
+          <a href="Canadian.html" class="menu-link">View Menu</a>
+        </div>
+        <div class="menu-card">
+          <h3><img src="https://flagcdn.com/32x24/kr.png" alt="Korea Flag" class="flag-icon"> Korean Cuisine</h3>
+          <img src="popcornchicken_1.png" alt="Popcorn Chicken" class="menu-image">
+
+          
+          <a href="Korean.html" class="menu-link">View Menu</a>
+        </div>
+        <div class="menu-card">
+          <h3><img src="https://flagcdn.com/32x24/jp.png" alt="Japan Flag" class="flag-icon"> Japanese Cuisine</h3>
+          <img src="sushi_1.png" alt="Sushi" class="menu-image">
+
+          
+          <a href="Japanese.html" class="menu-link">View Menu</a>
+        </div>
+        <div class="menu-card">
+          <h3>
+            <img src="https://img.icons8.com/ios-filled/32/000000/cutlery.png" alt="All Menu Icon" class="flag-icon">
+            All Menu
+          </h3>
+          <img src="diner81_2.png" alt="Diner81" class="menu-image">
+
+          
+          <a href="menuboard.html" class="menu-link">View All</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+  <footer class="footer">
+    <p>&copy; 2024 Diner 81. All rights reserved.</p>
+  </footer>
 </body>
 </html>
