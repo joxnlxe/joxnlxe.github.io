@@ -10,6 +10,7 @@
     crossorigin="anonymous"></script>    
 </head>
 <body>
+    <!-- Header -->
     <header>
         <div class="container">
             <h1>Diner 81</h1>
@@ -19,7 +20,6 @@
                     <li><a href="#bestmenu">Must Try!</a></li>
                     <li><a href="allmenu.html">All Menu</a></li>
                     <li><a href="#contact">Contact</a></li>
-
                 </ul>
                 <div class="social-media">
                     <a href="https://www.facebook.com/jaceyandmarry?mibextid=ZbWKwL" target="_blank" title="Follow us on Facebook">
@@ -30,17 +30,19 @@
         </div>
     </header>
     
+    <!-- About Section -->
     <section id="about">
         <div class="container">
             <h2>Welcome to Diner 81</h2>
-            <img src="main page.png" class="main-image">
-            <p>Diner 81 has always been a go-to spot for delicious Korean, Japanese, and local Canadian dishes. We can assure you that Diner 81 always uses the freshest ingredients  because customers’ satisfaction is Diner 81’s top priority. On top of this, Diner 81’s cozy atmosphere and friendly staff make every meal a special experience for everyone.I hope to see you at Diner 81 soon! Come and try for yourself!
+            <img src="main-page.png" class="main-image" alt="Main Diner 81">
+            <p>Diner 81 has always been a go-to spot for delicious Korean, Japanese, and local Canadian dishes. We can assure you that Diner 81 always uses the freshest ingredients because customers’ satisfaction is Diner 81’s top priority. On top of this, Diner 81’s cozy atmosphere and friendly staff make every meal a special experience for everyone. We hope to see you at Diner 81 soon! Come and try for yourself!
             </p>
             <br>
             <p>Diner 81 a toujours été un lieu de prédilection pour de délicieux plats coréens, japonais et canadiens locaux. Nous vous assurons que Diner 81 utilise toujours des ingrédients frais, car la satisfaction des clients est la priorité absolue de Diner 81. De plus, l’atmosphère chaleureuse de Diner 81 et le personnel sympathique rendent chaque repas spécial pour tout le monde. Nous espérons vous voir bientôt chez Diner 81 ! Venez essayer par vous-même!</p>
         </div>
     </section>
     
+    <!-- Must Try Menu Section -->
     <section id="bestmenu">
         <div class="container">
             <h2>Must Try!</h2>
@@ -63,31 +65,33 @@
         </div>
     </section>
     
+    <!-- Contact Section -->
     <section id="contact">
-    <div class="container">
-        <h2>Contact Us</h2>
-        <p>124 King Street, Saint Stephen, NB, Canada (E3L2C5)</p>
-        <p>Phone: +1(506)-466-2223</p>
-        <p><a href="https://www.google.com/maps/dir/?api=1&destination=124+King+Street,+Saint+Stephen,+NB,+Canada" target="_blank">Get Directions</a></p>
-        <div id="map" style="height: 400px; width: 100%; border-radius:10px; margin-top:20px;"></div>
-    </div>
-</section>
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>124 King Street, Saint Stephen, NB, Canada (E3L2C5)</p>
+            <p>Phone: +1(506)-466-2223</p>
+            <p><a href="https://www.google.com/maps/dir/?api=1&destination=124+King+Street,+Saint+Stephen,+NB,+Canada" target="_blank">Get Directions</a></p>
+            <div id="map" style="height: 400px; width: 100%; border-radius:10px; margin-top:20px;"></div>
+        </div>
+    </section>
 
-<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!-- Leaflet Map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
-<script>
-    var dinerCoords = [45.19771, -67.27468];
-    var map = L.map('map').setView(dinerCoords, 17);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
-    }).addTo(map);
-    L.marker(dinerCoords).addTo(map)
-        .bindPopup("<b>Diner 81</b><br>124 King Street, Saint Stephen<br><a target='_blank' href='https://www.google.com/maps/dir/?api=1&destination=45.19771,-67.27468'>Find Location</a>")
-        .openPopup();
-</script>
+    <script>
+        var dinerCoords = [45.19771, -67.27468];
+        var map = L.map('map').setView(dinerCoords, 17);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
+        }).addTo(map);
+        L.marker(dinerCoords).addTo(map)
+            .bindPopup("<b>Diner 81</b><br>124 King Street, Saint Stephen<br><a target='_blank' href='https://www.google.com/maps/dir/?api=1&destination=45.19771,-67.27468'>Find Location</a>")
+            .openPopup();
+    </script>
 
-    
+    <!-- Footer -->
     <footer>
         <div class="container">
             <p>&copy; 2024 Diner 81. All rights reserved.</p>
