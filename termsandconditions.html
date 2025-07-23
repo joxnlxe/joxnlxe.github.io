@@ -1,173 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms and Conditions - Diner 81</title>
-    <link rel="stylesheet" href="styles.css"> 
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4; 
-        }
-        body {
-            display: flex;
-            flex-direction: column;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 10px 0;
-            position: relative;
-            z-index: 1000; 
-        }
-        header h1 {
-            text-align: center;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            margin: 0;
-            font-size: 2em; 
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            flex: 1;
-        }
-        .content {
-            background: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
-            font-size: 1.1em; 
-        }
-        h2 {
-            color: #333;
-            font-size: 1.5em; 
-        }
-        h3 {
-            color: #333;
-            font-size: 1.3em; 
-        }
-        h4 {
-            color: #333;
-            font-size: 1.2em; 
-        }
-        p, ul {
-            margin: 10px 0;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        footer {
-            background: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            font-size: 1.1em; 
-            margin-top: auto; 
-        }
-        footer a {
-            color: #fff;
-            text-decoration: none;
-        }
-        footer a:hover {
-            color: #ddd;
-        }
-        .back-button {
-            position: absolute;
-            left: 10px;
-            top: 10px;
-            background: #555;
-            color: #fff;
-            border: none;
-            padding: 5px 10px;
-            border-radius: 3px;
-            cursor: pointer;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms and Conditions - Diner 81</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* 전체 레이아웃 */
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8f8f8;
+      display: flex;
+      flex-direction: column;
+    }
 
-        .back-button:hover {
-            background: #777;
-        }
-    </style>
+    /* 헤더 */
+    header {
+      background: linear-gradient(135deg, #2c2c2c, #444);
+      color: #fff;
+      padding: 1.5rem 0;
+      position: relative;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+    }
+
+    header h1 {
+      text-align: center;
+      margin: 0;
+      font-size: 2.2rem;
+      letter-spacing: 1px;
+    }
+
+    .back-button {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #555;
+      color: #fff;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .back-button:hover { background: #777; }
+
+    /* 메인 컨테이너 */
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 20px;
+      flex: 1;
+    }
+
+    /* 카드형 본문 */
+    .content {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #444;
+    }
+
+    /* 제목 스타일 */
+    h2 {
+      color: #222;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.5rem;
+    }
+    h3 {
+      margin-top: 1.5rem;
+      color: #333;
+      font-size: 1.4rem;
+    }
+    h4 {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    /* 리스트 */
+    ul {
+      padding-left: 20px;
+      margin: 0.5rem 0;
+    }
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* 구분선 */
+    .divider {
+      border-top: 2px dashed #ccc;
+      margin: 2rem 0;
+    }
+
+    /* 링크 */
+    a { color: #222; text-decoration: none; font-weight: 600; }
+    a:hover { color: #c8ff00; }
+
+    /* 푸터 */
+    footer {
+      background: #222;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1rem;
+      margin-top: auto;
+    }
+    footer a {
+      color: #ffd700;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    footer a:hover { text-decoration: underline; }
+  </style>
 </head>
 <body>
-    <header>
-        <button class="back-button" onclick="window.location.href='index.html';">Back</button>
-        <div class="container">
-            <h1>Diner 81</h1>
-        </div>
-    </header>
+  <header>
+    <button class="back-button" onclick="window.location.href='diner81.html';">← Back</button>
+    <h1>Diner 81 - Terms & Conditions</h1>
+  </header>
 
-    <div class="container">
-        <div class="content">
-            <h2>Terms and Conditions</h2>
-            <p>Welcome to Diner 81! By visiting <a href="https://diner81.com" target="_blank">diner81.com</a>, you agree to comply with these Terms and Conditions stated as below:</p>
-            
-            <h3>Acceptance of Terms:</h3>
-            <p>By accessing or using <a href="https://diner81.com" target="_blank">diner81.com</a>, you agree to these Terms and Conditions. If you do not agree with any part of these terms, you must not use the website or services we provide.</p>
-            
-            <h3>Modifications to Terms:</h3>
-            <p>Diner 81 fully has the right to modify these Terms and Conditions at any time. Any changes will be effective immediately upon updating on our website. Your continued use of the website or services constitutes acceptance of the revised terms.</p>
-            
-            <h3>Use of the Website:</h3>
-            <h4>Prohibited Activities:</h4>
-            <ul>
-                <li>Sharing or reposting our services on any website that is defamatory, obscene, or offensive.</li>
-                <li>Attempting to gain unauthorized access to any portion of the website.</li>
-                <li>Using the website in a manner that could damage, disable, or impair the website.</li>
-            </ul>
-            
-            <h3>Intellectual Property:</h3>
-            <p>All content on our website, including text, images, logos, and software, is the property of Diner 81 or its licensors and is protected by copyright and other intellectual property laws. You may not reproduce, distribute, or create derivative works from any content without our permission.</p>
-            
-            <h3>Contact Us:</h3>
-            <p>If you have any questions or concerns about these Terms and Conditions, please contact the UI/UX designer named Joonyeong Lee at:</p>
-            <p>
-                Joonyeong Lee<br>
-                Seoul, South Korea<br>
-                Email: <a href="mailto:jyl030409@gmail.com">jyl030409@gmail.com</a><br>
-            </p>
-            <p>-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
-            <h2>Conditions Générales</h2>
-            <p>Bienvenue chez Diner 81 ! En visitant <a href="https://diner81.com" target="_blank">diner81.com</a>, vous acceptez de vous conformer aux Conditions Générales énoncées ci-dessous :</p>
-            
-            <h3>Acceptation des Conditions :</h3>
-            <p>En accédant ou en utilisant <a href="https://diner81.com" target="_blank">diner81.com</a>, vous acceptez ces Conditions Générales. Si vous n'acceptez pas une partie quelconque de ces conditions, vous ne devez pas utiliser le site Web ni les services que nous fournissons.</p>
-            
-            <h3>Modifications des Conditions :</h3>
-            <p>Diner 81 a pleinement le droit de modifier ces Conditions Générales à tout moment. Les modifications seront effectives immédiatement après leur mise à jour sur notre site Web. Votre utilisation continue du site Web ou des services constitue une acceptation des termes révisés.</p>
-            
-            <h3>Utilisation du Site Web :</h3>
-            <h4>Activités Interdites :</h4>
-            <ul>
-                <li>Partager ou republier nos services sur tout site Web qui est diffamatoire, obscène ou offensant.</li>
-                <li>Tenter d'accéder sans autorisation à une partie quelconque du site Web.</li>
-                <li>Utiliser le site Web de manière à endommager, désactiver ou altérer le site Web.</li>
-            </ul>
-            
-            <h3>Propriété Intellectuelle :</h3>
-            <p>Tous les contenus de notre site Web, y compris les textes, images, logos et logiciels, sont la propriété de Diner 81 ou de ses concédants de licence et sont protégés par les lois sur le droit d'auteur et d'autres lois sur la propriété intellectuelle. Vous ne pouvez pas reproduire, distribuer ou créer des œuvres dérivées de tout contenu sans notre autorisation.</p>
-            
-            <h3>Contactez-nous :</h3>
-            <p>Si vous avez des questions ou des préoccupations concernant ces Conditions Générales, veuillez contacter le designer UI/UX nommé Joonyeong Lee à :</p>
-            <p>
-                Joonyeong Lee<br>
-                Séoul, Corée du Sud<br>
-                Email : <a href="mailto:jyl030409@gmail.com">jyl030409@gmail.com</a><br>
-            </p>
-        </div>
+  <div class="container">
+    <div class="content">
+      <h2>Terms and Conditions</h2>
+      <p>Welcome to <a href="https://diner81.com" target="_blank">diner81.com</a>! By visiting our website, you agree to comply with the following Terms and Conditions:</p>
+      
+      <h3>Acceptance of Terms</h3>
+      <p>By accessing or using <a href="https://diner81.com" target="_blank">diner81.com</a>, you agree to these Terms. If you do not agree, please discontinue using our website and services.</p>
+      
+      <h3>Modifications</h3>
+      <p>Diner 81 reserves the right to update these Terms at any time. Changes take effect immediately upon posting on our website. Continued use signifies acceptance of the updated Terms.</p>
+      
+      <h3>Use of the Website</h3>
+      <h4>Prohibited Activities</h4>
+      <ul>
+        <li>Sharing our content on defamatory, obscene, or offensive platforms.</li>
+        <li>Attempting unauthorized access to any part of the website.</li>
+        <li>Using the website in any way that may harm, disable, or impair its functionality.</li>
+      </ul>
+      
+      <h3>Intellectual Property</h3>
+      <p>All content on <a href="https://diner81.com" target="_blank">diner81.com</a>, including text, images, and logos, belongs to Diner 81 and is protected by copyright and intellectual property laws.</p>
+      
+      <h3>Contact Us</h3>
+      <p>For questions or concerns, please contact:</p>
+      <p>
+        Joonyeong Lee<br>
+        Seoul, South Korea<br>
+        Email: <a href="mailto:jyl030409@gmail.com">jyl030409@gmail.com</a><br>
+        Phone: +82(10)-5813-5172
+      </p>
+
+      <div class="divider"></div>
+
+      <h2>Conditions Générales</h2>
+      <p>Bienvenue sur <a href="https://diner81.com" target="_blank">diner81.com</a> ! En visitant notre site, vous acceptez les conditions générales suivantes :</p>
+      
+      <h3>Acceptation des Conditions</h3>
+      <p>En accédant ou en utilisant notre site, vous acceptez ces conditions générales. Si vous n’êtes pas d’accord, veuillez cesser d’utiliser notre site.</p>
+      
+      <h3>Modifications</h3>
+      <p>Diner 81 se réserve le droit de modifier ces conditions à tout moment. Les changements prennent effet immédiatement après leur publication.</p>
+      
+      <h3>Utilisation du Site</h3>
+      <h4>Activités Interdites</h4>
+      <ul>
+        <li>Partager notre contenu sur des plateformes diffamatoires ou offensantes.</li>
+        <li>Tenter un accès non autorisé à une partie du site.</li>
+        <li>Utiliser le site d'une manière nuisible ou perturbatrice.</li>
+      </ul>
+      
+      <h3>Propriété Intellectuelle</h3>
+      <p>Tous les contenus du site sont la propriété de Diner 81 et protégés par les lois sur la propriété intellectuelle.</p>
+      
+      <h3>Contact</h3>
+      <p>Pour toute question :</p>
+      <p>
+        Joonyeong Lee<br>
+        Séoul, Corée du Sud<br>
+        Email : <a href="mailto:jyl030409@gmail.com">jyl030409@gmail.com</a><br>
+        Téléphone : +82(10)-5813-5172
+      </p>
     </div>
+  </div>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 'Diner 81'. All rights reserved.</p>
-            <p>
-                <a href="index.html">Back to Home</a>
-            </p>
-        </div>
-    </footer>
+  <footer>
+    <p>&copy; 2024 Diner 81. All rights reserved. | <a href="diner81.html">Back to Home</a></p>
+  </footer>
 </body>
 </html>
