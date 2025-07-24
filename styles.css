@@ -3,6 +3,7 @@ html, body {
     display: flex;
     flex-direction: column;
 }
+
 /* Reset */
 body, h1, h2, h3, p, ul {
     margin: 0;
@@ -36,6 +37,7 @@ header h1, .menu-header h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* Back button */
 .back-button {
     position: absolute;
     left: 20px;
@@ -105,10 +107,6 @@ nav ul li a:hover {
     color: #ddd;
 }
 
-.social-media i {
-    font-size: 1.5em;
-}
-
 /* Section */
 section {
     padding: 3rem 0;
@@ -130,8 +128,8 @@ section .container {
 
 /* Animations */
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes slideIn {
@@ -149,64 +147,38 @@ section .container {
     animation: fadeIn 2s ease-in-out;
 }
 
-/* Menu Items - 카드 스타일 */
-.menu-item {
-    background: #fff;
-    border: none;
-    padding: 2rem;
-    margin: 1.5rem 0;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-}
-
-.menu-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-
-.menu-item h3 {
-    margin-bottom: 0.8rem;
-    font-size: 1.6rem;
-    color: #222;
-}
-
-.menu-item p {
-    margin-bottom: 0.5rem;
-    font-size: 1.1rem;
-}
-
-/* --- Menu Page Specific --- */
-.menu-section {
-    padding: 3rem 0;
-}
-.menu-section h2 {
+/* --- Menu Section (공통) --- */
+.section-title {
+    font-size: 2.2rem;
     text-align: center;
-    font-size: 2rem;
-    margin-bottom: 2rem;
     color: #222;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    animation: fadeIn 1s ease;
 }
 
-.menu-grid {
-    display: grid !important;
+/* Menu Grid */
+.menu-grid, .must-try-grid {
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    row-gap: 50px !important; /* 세로 간격 */
-    column-gap: 30px !important; /* 가로 간격 */
+    gap: 30px;
     margin-bottom: 30px;
 }
 
+/* Menu Card */
 .menu-card {
     background: #fff;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     padding: 1.5rem;
     transition: all 0.3s ease;
-    cursor: pointer;
-    text-align: center;
+    animation: fadeIn 0.6s ease-in-out;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 260px; /* 카드 높이 통일 */
+    min-height: 230px; /* 카드 높이 통일 */
+    cursor: pointer;
+    text-align: center;
 }
 
 .menu-card:hover {
@@ -219,22 +191,27 @@ section .container {
     font-size: 1.5rem;
     color: #222;
 }
+
 .menu-card p {
     margin: 1rem 0;
     color: #666;
+    font-size: 1rem;
 }
-.menu-link {
+
+/* Price Badge */
+.price-wrapper {
+    text-align: center;
+    margin-top: auto;
+}
+
+.price-badge {
     display: inline-block;
     background: #333;
     color: #fff;
-    text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: background 0.3s;
-    margin-top: auto;
-}
-.menu-link:hover {
-    background: #555;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1rem;
 }
 
 /* Contact Section */
@@ -255,11 +232,11 @@ section .container {
     color: #ff6600;
 }
 
+/* Footer */
 main {
     flex: 1;
 }
 
-/* Footer */
 footer {
     background: #222;
     color: #fff;
@@ -277,7 +254,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Terms box */
+/* Terms Box */
 #terms-and-conditions {
     padding: 15px;
     background-color: #f9f9f9;
@@ -300,11 +277,6 @@ footer a:hover {
     font-size: 1.2em;
 }
 
-#terms-and-conditions p, 
-#terms-and-conditions ul {
-    margin: 10px 0;
-}
-
 #terms-and-conditions ul {
     padding-left: 20px;
 }
@@ -313,6 +285,7 @@ footer a:hover {
     margin-bottom: 10px;
 }
 
+/* Flag Icon */
 .flag-icon {
     width: 24px;
     height: auto;
@@ -320,103 +293,26 @@ footer a:hover {
     margin-right: 8px;
     border-radius: 3px;
 }
-.section-title {
-  font-size: 2rem;
-  text-align: center;
-  color: #222;
-  margin-bottom: 1.5rem;
-  font-weight: 700;
-  animation: fadeIn 1s ease;
-}
 
-.menu-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.menu-card {
-  background: #fff;
-  border-radius: 10px;
-  padding: 1.5rem;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
-  animation: slideIn 0.8s ease;
-}
-.menu-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-.menu-card h3 {
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
-  color: #333;
-}
-.menu-card p {
-  font-size: 1rem;
-  color: #555;
-}
-
-.section-title {
-    text-align: center;
-    font-size: 2.2rem;
-    margin-bottom: 2rem;
-    color: #222;
-}
-
-.must-try-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
-
-.menu-card {
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    padding: 1.5rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: fadeIn 0.6s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 230px; /* 카드 높이 통일 */
-}
-
-.menu-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-
-.menu-info h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: #333;
-}
-
-.menu-info p {
-    color: #666;
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    flex-grow: 1;
-}
-
-.price-wrapper {
-    text-align: center;
-    margin-top: auto;
-}
-
-.price-badge {
-    display: inline-block;
-    background: #333;
+.menu-link {
+    display: block;
+    width: 100%;
+    background: #000; /* 검정 배경 */
     color: #fff;
-    padding: 8px 14px;
-    border-radius: 20px;
+    text-decoration: none;
+    padding: 12px 0;
+    border-radius: 50px; /* ← 둥글게 */
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    margin-top: auto;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+.menu-link:hover {
+    background: #444; /* 호버 시 진회색 */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
 }
+
