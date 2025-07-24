@@ -7,10 +7,63 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 500px;
+            margin: 20px auto;
+        }
+        #contact-form input,
+        #contact-form textarea {
+            font-family: inherit;
+            font-size: 1rem;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        #contact-form textarea {
+            resize: none;
+            min-height: 120px;
+        }
+        #contact-form button {
+            background: #333;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        #contact-form button:hover {
+            background: #555;
+        }
+        #map {
+            height: 400px;
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .phone-number {
+            text-align: center;
+            font-size: 1.3rem;
+            margin: 10px 0;
+        }
+        .phone-number a {
+            color: #333;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .phone-number a:hover {
+            color: #ff6600;
+        }
+    </style>
 </head>
-
 <body>
-    <!-- Header -->
     <header>
         <div class="container">
             <h1>Diner 81</h1>
@@ -30,83 +83,103 @@
         </div>
     </header>
     
-    <!-- About Section -->
     <section id="about">
         <div class="container">
             <h2>Welcome to Diner 81</h2>
             <img src="main-page.png" class="main-image" alt="Main Diner 81">
-            <p>Diner 81 has always been a go-to spot for delicious Korean, Japanese, and local Canadian dishes. We can assure you that Diner 81 always uses the freshest ingredients because customers’ satisfaction is Diner 81’s top priority. On top of this, Diner 81’s cozy atmosphere and friendly staff make every meal a special experience for everyone. We hope to see you at Diner 81 soon! Come and try for yourself!
-            </p>
+            <p>Diner 81 has always been a go-to spot for delicious Korean, Japanese, and local Canadian dishes. We can assure you that Diner 81 always uses the freshest ingredients because customers’ satisfaction is our top priority.</p>
             <br>
-            <p>Diner 81 a toujours été un lieu de prédilection pour de délicieux plats coréens, japonais et canadiens locaux. Nous vous assurons que Diner 81 utilise toujours des ingrédients frais, car la satisfaction des clients est la priorité absolue de Diner 81. De plus, l’atmosphère chaleureuse de Diner 81 et le personnel sympathique rendent chaque repas spécial pour tout le monde. Nous espérons vous voir bientôt chez Diner 81 ! Venez essayer par vous-même!</p>
+            <p>Diner 81 a toujours été un lieu de prédilection pour de délicieux plats coréens, japonais et canadiens locaux. Nous espérons vous voir bientôt chez Diner 81 ! Venez essayer par vous-même!</p>
         </div>
     </section>
     
-    <!-- Must Try Menu Section -->
-<section id="bestmenu">
-    <div class="container">
-        <h2 class="section-title">Must Try!</h2>
-        <div id="mustTryGrid" class="must-try-grid">
-            <!-- JS가 랜덤 카드 삽입 -->
+    <section id="bestmenu">
+        <div class="container">
+            <h2 class="section-title">Must Try!</h2>
+            <div id="mustTryGrid" class="must-try-grid"></div>
         </div>
-    </div>
-</section>
+    </section>
 
-<script>
-    const mustTryMenu = [
-        { name: "Smoked Meat & Cheese Sub", desc: "Montreal Smoked Meat, Jack Cheese and Mustard.", price: '6" $7.99 / 12" $13.99' },
-        { name: "Popcorn Chicken", desc: "Deep fried chicken coated with home-made Korean sweet & spicy sauce.", price: "Small $13.99 / Large $18.99" },
-        { name: "Dynamite Rolls", desc: "Shrimp Tempura, Crabstick, Avocado, Cucumber topped with Eel sauce, Tobiko, and Masago.", price: "$14.99" },
-        { name: "Bibimbap", desc: "Assorted vegetables and fried egg over rice in a hot bowl with Korean Gochujang sauce.", price: "$14.99" },
-        { name: "Dragon Roll", desc: "Shrimp Tempura, Crabstick, Avocado, topped with Eel and Avocado.", price: "$17.99" },
-        { name: "Clams & Chips", desc: "Plump Whole Clams lightly breaded and fried to golden brown.", price: "Small $20.99 / Large $28.99" },
-        { name: "Chicken Tenders", desc: "Crispy breaded chicken fillets served with dipping sauce.", price: "$16.99" },
-        { name: "BBQ Bacon Swiss Burger", desc: "Juicy burger with BBQ sauce, bacon, and Swiss cheese.", price: "Burger $9.99 / Platter $14.49" },
-        { name: "Seafood Platter", desc: "Haddock, clams, shrimp, and scallops with fries or mash.", price: "Small $29.99 / Large $39.99" },
-        { name: "Japchae", desc: "Korean glass noodles stir-fried with vegetables.", price: "$14.49" }
-    ];
-
-    function getRandomItems(arr, count) {
-        const shuffled = [...arr].sort(() => 0.5 - Math.random());
-        return shuffled.slice(0, count);
-    }
-
-    const selectedMenu = getRandomItems(mustTryMenu, 6);
-    const mustTryGrid = document.getElementById('mustTryGrid');
-
-    selectedMenu.forEach(item => {
-        const card = document.createElement('div');
-        card.classList.add('menu-card');
-        card.innerHTML = `
-            <div class="menu-info">
-                <h3>${item.name}</h3>
-                <p>${item.desc}</p>
-            </div>
-            <div class="price-wrapper">
-                <span class="price-badge">${item.price}</span>
-            </div>
-        `;
-        mustTryGrid.appendChild(card);
-    });
-</script>
-
-
-    
-    <!-- Contact Section -->
     <section id="contact">
         <div class="container">
-            <h2>Contact Us</h2>
-            <p>124 King Street, Saint Stephen, NB, Canada (E3L2C5)</p>
-            <p>Phone: +1(506)-466-2223</p>
-            <div id="map" style="height: 400px; width: 100%; border-radius:10px; margin-top:20px;"></div>
+            <h2>Email Us!</h2>
+            <form id="contact-form">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="text" name="title" placeholder="Subject" required>
+                <input type="hidden" name="time">
+                <textarea name="message" placeholder="Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+
+            <h2>Call Us!</h2>
+            <div class="phone-number">
+                <a href="tel:+15064662223">+1 (506) 466-2223</a>
+            </div>
+            <div id="map"></div>
         </div>
     </section>
 
-    <!-- Leaflet Map -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Diner 81. All rights reserved.</p>
+            <p><a href="termsandconditions.html">Terms and Conditions</a></p>
+        </div>
+    </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            emailjs.init("qdHIci-2csmpz9QPb");
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                this.time.value = new Date().toLocaleString();
+                emailjs.sendForm('service_diner81', 'template_d3f9x44', this)
+                    .then(() => {
+                        alert('Email sent!');
+                        this.reset();
+                    }, (err) => {
+                        alert('Failed to send message. Error: ' + JSON.stringify(err));
+                    });
+            });
+        });
+
+        const mustTryMenu = [
+            { name: "Smoked Meat & Cheese Sub", desc: "Montreal Smoked Meat, Jack Cheese and Mustard.", price: '6" $7.99 / 12" $13.99' },
+            { name: "Popcorn Chicken", desc: "Deep fried chicken coated with home-made Korean sweet & spicy sauce.", price: "Small $13.99 / Large $18.99" },
+            { name: "Dynamite Rolls", desc: "Shrimp Tempura, Crabstick, Avocado, Cucumber topped with Eel sauce, Tobiko, and Masago.", price: "$14.99" },
+            { name: "Bibimbap", desc: "Assorted vegetables and fried egg over rice in a hot bowl with Korean Gochujang sauce.", price: "$14.99" },
+            { name: "Dragon Roll", desc: "Shrimp Tempura, Crabstick, Avocado, topped with Eel and Avocado.", price: "$17.99" },
+            { name: "Clams & Chips", desc: "Plump Whole Clams lightly breaded and fried to golden brown.", price: "Small $20.99 / Large $28.99" },
+            { name: "Chicken Tenders", desc: "Crispy breaded chicken fillets served with dipping sauce.", price: "$16.99" },
+            { name: "BBQ Bacon Swiss Burger", desc: "Juicy burger with BBQ sauce, bacon, and Swiss cheese.", price: "Burger $9.99 / Platter $14.49" },
+            { name: "Seafood Platter", desc: "Haddock, clams, shrimp, and scallops with fries or mash.", price: "Small $29.99 / Large $39.99" },
+            { name: "Japchae", desc: "Korean glass noodles stir-fried with vegetables.", price: "$14.49" }
+        ];
+
+        function getRandomItems(arr, count) {
+            const shuffled = [...arr].sort(() => 0.5 - Math.random());
+            return shuffled.slice(0, count);
+        }
+
+        const selectedMenu = getRandomItems(mustTryMenu, 6);
+        const mustTryGrid = document.getElementById('mustTryGrid');
+        selectedMenu.forEach(item => {
+            const card = document.createElement('div');
+            card.classList.add('menu-card');
+            card.innerHTML = `
+                <div class="menu-info">
+                    <h3>${item.name}</h3>
+                    <p>${item.desc}</p>
+                </div>
+                <div class="price-wrapper">
+                    <span class="price-badge">${item.price}</span>
+                </div>
+            `;
+            mustTryGrid.appendChild(card);
+        });
+
         var dinerCoords = [45.19771, -67.27468];
         var map = L.map('map').setView(dinerCoords, 17);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -116,13 +189,5 @@
             .bindPopup("<b>Diner 81</b><br>124 King Street, Saint Stephen<br><a target='_blank' href='https://www.google.com/maps/dir/?api=1&destination=45.19771,-67.27468'>Find Location</a>")
             .openPopup();
     </script>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Diner 81. All rights reserved.</p>
-            <p><a href="termsandconditions.html">Terms and Conditions</a></p>
-        </div>
-    </footer>
 </body>
 </html>
