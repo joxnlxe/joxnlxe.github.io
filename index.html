@@ -8,85 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <style>
-        #contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            max-width: 500px;
-            margin: 20px auto;
-        }
-        #contact-form input,
-        #contact-form textarea {
-            font-family: inherit;
-            font-size: 1rem;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            width: 100%;
-            box-sizing: border-box;
-        }
-        #contact-form textarea {
-            resize: none;
-            min-height: 120px;
-        }
-        #contact-form button {
-            background: #333;
-            color: #fff;
-            padding: 12px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        #contact-form button:hover {
-            background: #555;
-        }
-        #map {
-            height: 400px;
-            width: 100%;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
-        .call-us-card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            max-width: 500px;
-            margin: 20px auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-        .call-us-card .call-top {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-        .call-us-card i {
-            font-size: 1.3rem;
-            color: #ff6600;
-        }
-        .call-us-card a {
-            font-weight: bold;
-            color: #333;
-            text-decoration: none;
-            font-size: 1.3rem;
-        }
-        .call-us-card a:hover {
-            color: #ff6600;
-        }
-        .call-us-card p {
-            margin-top: 8px;
-            color: #555;
-            font-size: 1rem;
-        }
-    </style>
+
 </head>
 <body>
     <header>
@@ -97,6 +19,7 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#bestmenu">Must Try!</a></li>
                     <li><a href="allmenu.html">All Menu</a></li>
+                    <li><a href="#faq">FAQ</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
                 <div class="social-media">
@@ -136,6 +59,33 @@
         <div class="container">
             <h2 class="section-title">Must Try!</h2>
             <div id="mustTryGrid" class="must-try-grid"></div>
+        </div>
+    </section>
+
+    <!-- FAQ 섹션 추가 -->
+    <section id="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3>Do you offer delivery?</h3>
+                <p>We currently offer take-out only. We are working on delivery services so please stay tuned!</p>
+            </div>
+            <div class="faq-item">
+                <h3>Do you have vegetarian options?</h3>
+                <p>Yes! We have several vegetarian-friendly dishes such as Bibimbap (without meat), Japchae, and various sushi rolls. Feel free to ask our staff for recommendations.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Can I make a reservation?</h3>
+                <p>We accept reservations for groups and special events. Please call us at <a href="tel:+15064662223">+1 (506) 466-2223</a> to book a table.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Do you offer gluten-free dishes?</h3>
+                <p>Yes, some of our dishes are gluten-free. Ask our staff for details when you order.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Which days do you serve Korean & Japanese dishes?</h3>
+                <p>Korean dishes are available from Wednesday to Sunday, and Japanese dishes from Thursday to Saturday.</p>
+            </div>
         </div>
     </section>
     
