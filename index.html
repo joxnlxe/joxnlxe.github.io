@@ -38,6 +38,26 @@
         </div>
     </section>
 
+    <section id="gallery">
+    <div class="container">
+        <h2>Diner 81 Pics!</h2>
+        <div class="gallery-slider">
+            <div class="gallery-track">
+                <img src="home.png" alt="Diner 81">
+                <img src="Sub.png" alt="Sub">
+                <img src="ramyun.png" alt="Ramyun">
+                <img src="Fried-Rice.png" alt="Bokkeumbap">
+                <img src="Sushi.png" alt="Sushi">
+            </div>
+        </div>
+        <div class="gallery-controls">
+            <button class="prev-btn">&#10094;</button>
+            <button class="next-btn">&#10095;</button>
+        </div>
+    </div>
+</section>
+
+
     <section id="hours">
         <div class="container">
             <div class="opening-times">
@@ -182,6 +202,36 @@
         L.marker(dinerCoords).addTo(map)
             .bindPopup("<b>Diner 81</b><br>124 King Street, Saint Stephen<br><a target='_blank' href='https://www.google.com/maps/dir/?api=1&destination=45.19771,-67.27468'>Find Location</a>")
             .openPopup();
+            
     </script>
+    <script>
+    // Gallery Slider
+    const track = document.querySelector('.gallery-track');
+    const slides = Array.from(track.children);
+    const prevButton = document.querySelector('.prev-btn');
+    const nextButton = document.querySelector('.next-btn');
+    let index = 0;
+
+    function updateSlide() {
+        track.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    nextButton.addEventListener('click', () => {
+        index = (index + 1) % slides.length;
+        updateSlide();
+    });
+
+    prevButton.addEventListener('click', () => {
+        index = (index - 1 + slides.length) % slides.length;
+        updateSlide();
+    });
+
+    // 자동 슬라이드 (3초 간격)
+    setInterval(() => {
+        index = (index + 1) % slides.length;
+        updateSlide();
+    }, 3000);
+</script>
+
 </body>
 </html>
