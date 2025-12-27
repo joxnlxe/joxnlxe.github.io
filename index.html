@@ -9,6 +9,67 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-auth-compat.js"></script>
+
+    <script>
+    const firebaseConfig = {
+    apiKey: "AIzaSyCkpuWLMgG-X89FcZPjKDA-zqpjlLBJ_Qc",
+    authDomain: "diner81-auth.firebaseapp.com",
+    projectId: "diner81-auth
+",
+    appId: "YOUR_APP_ID"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+<!-- ❄️ Snow Effect -->
+<style>
+.snowflake {
+    position: fixed;
+    top: -10px;
+    z-index: 9999;
+    color: white;
+    pointer-events: none;
+    user-select: none;
+    opacity: 0.8;
+    animation: fall linear forwards, sway ease-in-out infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh);
+    }
+}
+
+@keyframes sway {
+    0% { margin-left: 0px; }
+    50% { margin-left: 20px; }
+    100% { margin-left: 0px; }
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    setInterval(() => {
+        const snow = document.createElement("div");
+        snow.className = "snowflake";
+        snow.innerHTML = "❄";
+
+        snow.style.left = Math.random() * window.innerWidth + "px";
+        snow.style.fontSize = Math.random() * 6 + 10 + "px";
+        snow.style.animationDuration = Math.random() * 5 + 5 + "s";
+
+        document.body.appendChild(snow);
+
+        setTimeout(() => snow.remove(), 10000);
+    }, 200);
+});
+</script>
+
+
+
 </head>
 <body>
     <header>
