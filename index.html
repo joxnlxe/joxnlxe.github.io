@@ -13,13 +13,12 @@
     <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-auth-compat.js"></script>
 
     <script>
-    const firebaseConfig = {
-    apiKey: "AIzaSyCkpuWLMgG-X89FcZPjKDA-zqpjlLBJ_Qc",
-    authDomain: "diner81-auth.firebaseapp.com",
-    projectId: "diner81-auth
-",
-    appId: "YOUR_APP_ID"
-  };
+   const firebaseConfig = {
+      apiKey: "AIzaSyCkpuWLMgG-X89FcZPjKDA-zqpjlLBJ_Qc",
+      authDomain: "diner81-auth.firebaseapp.com",
+      projectId: "diner81-auth", // 👈 이렇게 공백이나 줄바꿈 없이 한 줄로 닫아주세요.
+      appId: "YOUR_APP_ID"
+    };
 
   firebase.initializeApp(firebaseConfig);
 </script>
@@ -73,6 +72,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </head>
 <body>
+    <!-- World Cup Popup -->
+<div id="worldCupPopup" class="popup-overlay">
+    <div class="popup-box">
+        <button id="closePopup" class="popup-close">&times;</button>
+
+        <h2>⚽ FIFA World Cup 2026</h2>
+
+        <p>
+            Order Ahead and Enjoy the Kickoff at Home!
+        </p>
+
+  <ul>
+    <li>Your favorite spot on 124 King Street</li>
+    <li>🥢 Fresh Sushi Rolls & Crispy Popcorn Chicken</li>
+    <li>🍔 Classic Canadian Diner Favorites & Juicy Burgers</li>
+</ul>
+       <!-- target="_blank"를 추가하면 식당 사이트는 그대로 유지된 채 새 창으로 열립니다 -->
+<button onclick="window.open('https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026', '_blank')">
+    Learn More
+</button>
+    </div>
+</div>
     <header>
         <div class="container">
             <h1>Diner 81</h1>
@@ -264,6 +285,10 @@ document.addEventListener("DOMContentLoaded", () => {
         L.marker(dinerCoords).addTo(map)
             .bindPopup("<b>Diner 81</b><br>124 King Street, Saint Stephen<br><a target='_blank' href='https://www.google.com/maps/dir/?api=1&destination=45.19771,-67.27468'>Find Location</a>")
             .openPopup();
+        // 월드컵 팝업 닫기 기능
+document.getElementById('closePopup').addEventListener('click', function() {
+    document.getElementById('worldCupPopup').style.display = 'none';
+});
             
     </script>
     <script>
