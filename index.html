@@ -88,7 +88,6 @@ document.addEventListener("DOMContentLoaded", () => {
     <li>🥢 Fresh Sushi Rolls & Crispy Popcorn Chicken</li>
     <li>🍔 Classic Canadian Diner Favorites & Juicy Burgers</li>
 </ul>
-       <!-- target="_blank"를 추가하면 식당 사이트는 그대로 유지된 채 새 창으로 열립니다 -->
 <button onclick="window.open('https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026', '_blank')">
     Learn More
 </button>
@@ -140,8 +139,25 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
 </section>
 
-
-    <section id="hours">
+<section id="weather">
+    <div class="container">
+        <div class="weather-card">
+            <div class="weather-left">
+                <img id="weatherIcon" src="" alt="Weather icon">
+            </div>
+            <div class="weather-right">
+                <h2 id="weatherTemp">--°C</h2>
+                <p id="weatherCondition">Loading...</p>
+                <p id="weatherLocation">Saint Stephen, NB</p>
+                <div class="weather-details">
+                    <span id="weatherFeels">Feels like --°C</span>
+                    <span id="weatherHumidity">Humidity --%</span>
+                    <span id="weatherWind">Wind -- km/h</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>    <section id="hours">
         <div class="container">
             <div class="opening-times">
                 <h2><i class="fas fa-clock"></i> Opening Times</h2>
@@ -319,6 +335,50 @@ document.getElementById('closePopup').addEventListener('click', function() {
         updateSlide();
     }, 3000);
 </script>
+<script>
+async function loadWeather(){
 
+    const apiKey = "84aa0f4193054589a3020523261607"; // 여기 네 WeatherAPI 키 넣기
+
+    try{
+
+        const res = await fetch(
+            `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=Saint%20Stephen,NB&aqi=no`
+        );
+
+        const data = await res.json();
+
+        document.getElementById("weatherIcon").src =
+            "https:" + data.current.condition.icon;
+
+        document.getElementById("weatherTemp").textContent =
+            `${Math.round(data.current.temp_c)}°C`;
+
+        document.getElementById("weatherCondition").textContent =
+            data.current.condition.text;
+
+        document.getElementById("weatherLocation").textContent =
+            `${data.location.name}, ${data.location.region}`;
+
+        document.getElementById("weatherFeels").textContent =
+            `Feels like ${Math.round(data.current.feelslike_c)}°C`;
+
+        document.getElementById("weatherHumidity").textContent =
+            `Humidity ${data.current.humidity}%`;
+
+        document.getElementById("weatherWind").textContent =
+            `Wind ${Math.round(data.current.wind_kph)} km/h`;
+
+    }catch(err){
+
+        document.getElementById("weatherCondition").textContent =
+            "Unable to load weather";
+
+        console.error(err);
+    }
+}
+
+loadWeather();
+</script>
 </body>
 </html>
