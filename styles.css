@@ -539,3 +539,211 @@ footer a:hover {
     margin-top: 10px;
     cursor: pointer;
 }
+/* ==========================
+   Weather Section - Diner 81
+   ========================== */
+
+#weather {
+    padding: 40px 0;
+}
+
+
+/* Weather Card */
+
+.weather-card {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 30px;
+
+    width: 85%;
+    max-width: 700px;
+
+    margin: 30px auto;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+
+    /* Diner 81 Theme */
+    background: linear-gradient(
+        135deg,
+        #222,
+        #444
+    );
+
+
+    color: white;
+
+
+    border: 2px solid #d4af37;
+
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.3);
+
+
+    animation: fadeIn 1s ease;
+
+}
+
+
+
+/* Weather Icon */
+
+.weather-left {
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+
+.weather-left img {
+
+    width:100px;
+    height:100px;
+
+}
+
+
+
+/* Weather Information */
+
+.weather-right {
+
+    text-align:left;
+
+}
+
+
+.weather-right h3 {
+
+    margin:0 0 5px 0;
+
+    color:#ffd700;
+
+    font-size:1.4rem;
+
+}
+
+
+
+.weather-right h2 {
+
+    margin:0;
+
+    font-size:3rem;
+
+    line-height:1;
+
+    color:white;
+
+}
+
+
+
+.weather-right p {
+
+    margin-top:10px;
+
+    font-size:1.2rem;
+
+}
+
+
+
+/* Details */
+
+.weather-details {
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-top:20px;
+
+}
+
+
+
+.weather-details span {
+
+    background:
+    rgba(255,255,255,0.15);
+
+
+    padding:8px 15px;
+
+
+    border-radius:50px;
+
+
+    font-size:0.95rem;
+
+
+    backdrop-filter:blur(5px);
+
+}
+
+
+
+/* Hover Effect */
+
+.weather-card:hover {
+
+    transform:translateY(-5px);
+
+    transition:0.3s;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,0.4);
+
+}
+
+
+
+/* Mobile */
+
+@media(max-width:600px){
+
+
+    .weather-card {
+
+        flex-direction:column;
+
+        text-align:center;
+
+        padding:25px;
+
+    }
+
+
+    .weather-right {
+
+        text-align:center;
+
+    }
+
+
+    .weather-right h2 {
+
+        font-size:2.5rem;
+
+    }
+
+
+    .weather-details {
+
+        justify-content:center;
+
+    }
+
+
+}
