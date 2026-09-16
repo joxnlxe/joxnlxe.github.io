@@ -70,8 +70,68 @@ document.addEventListener("DOMContentLoaded", () => {
  -->
 
 
+
+<style>
+/* 🆕 Updated Menu Popup */
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 10000;
+}
+.popup-box {
+    position: relative;
+    background: white;
+    color: #222;
+    width: 100%;
+    max-width: 480px;
+    padding: 40px 30px 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+.popup-box h2 { margin-bottom: 20px; font-size: 26px; }
+.popup-box p { line-height: 1.6; margin-bottom: 12px; }
+.popup-close {
+    position: absolute; top: 10px; right: 15px; border: none;
+    background: none; font-size: 32px; cursor: pointer; color: #555;
+}
+.menu-popup-button {
+    display: block; background: #222; color: white; text-decoration: none;
+    padding: 14px 20px; border-radius: 8px; margin: 25px 0 20px; font-weight: bold;
+}
+.menu-popup-button:hover { background: #444; }
+.dont-show-again {
+    display: flex; justify-content: center; align-items: center; gap: 8px;
+    font-size: 14px; cursor: pointer;
+}
+.dont-show-again input { width: 16px; height: 16px; cursor: pointer; }
+@media (max-width: 480px) {
+    .popup-box { padding: 40px 20px 25px; }
+    .popup-box h2 { font-size: 22px; }
+}
+</style>
 </head>
 <body>
+
+    <!-- 🆕 Updated Menu Popup -->
+    <div id="menuUpdatePopup" class="popup-overlay" role="dialog" aria-modal="true" aria-labelledby="menuUpdateTitle">
+        <div class="popup-box menu-update-box">
+            <button id="closeMenuPopup" class="popup-close" aria-label="Close popup">&times;</button>
+            <h2 id="menuUpdateTitle">🎉 Our Menu Has Been Updated!</h2>
+            <p>We’re excited to announce that our updated menu is now available on our website!</p>
+            <p>Check out our latest dishes and discover your new favourites at Diner 81.</p>
+            <a href="allmenu.html" class="menu-popup-button">View Updated Menu</a>
+            <label class="dont-show-again">
+                <input type="checkbox" id="dontShowMenuPopup">
+                Don't show this message again
+            </label>
+        </div>
+    </div>
   <!--   <!-- World Cup Popup --> <!-- 
 <div id="worldCupPopup" class="popup-overlay">
     <div class="popup-box">
@@ -237,7 +297,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Diner 81. All rights reserved.</p>
+            <p>&copy; 2026 Diner 81. All rights reserved.</p>
             <p><a href="termsandconditions.html">Terms and Conditions</a></p>
         </div>
     </footer>
@@ -261,16 +321,15 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         const mustTryMenu = [
-            { name: "Smoked Meat & Cheese Sub", desc: "Montreal Smoked Meat, Jack Cheese and Mustard.", price: '6" $7.99 / 12" $13.99' },
-            { name: "Popcorn Chicken", desc: "Deep fried chicken coated with home-made Korean sweet & spicy sauce.", price: "Small $13.99 / Large $18.99" },
+            { name: "Smoked Meat & Cheese Sub", desc: "Montreal Smoked Meat, Jack Cheese and Mustard.", price: '6" $8.49 / 12" $14.99' },
+            { name: "Popcorn Chicken", desc: "Deep fried chicken coated with home-made Korean sweet & spicy sauce.", price: "Small $15.99 / Large $20.99" },
             { name: "Dynamite Rolls", desc: "Shrimp Tempura, Crabstick, Avocado, Cucumber topped with Eel sauce, Tobiko, and Masago.", price: "$14.99" },
-            { name: "Bibimbap", desc: "Assorted vegetables and fried egg over rice in a hot bowl with Korean Gochujang sauce.", price: "$14.99" },
-            { name: "Dragon Roll", desc: "Shrimp Tempura, Crabstick, Avocado, topped with Eel and Avocado.", price: "$17.99" },
-            { name: "Clams & Chips", desc: "Plump Whole Clams lightly breaded and fried to golden brown.", price: "Small $20.99 / Large $28.99" },
+            { name: "Bibimbap", desc: "Assorted vegetables and fried egg over rice in a hot bowl with Korean Gochujang sauce.", price: "$15.99" },
+            { name: "Clams & Chips", desc: "Plump Whole Clams lightly breaded and fried to golden brown.", price: "Small $21.99 / Large $29.99" },
             { name: "Chicken Tenders", desc: "Crispy breaded chicken fillets served with dipping sauce.", price: "$16.99" },
-            { name: "BBQ Bacon Swiss Burger", desc: "Juicy burger with BBQ sauce, bacon, and Swiss cheese.", price: "Burger $9.99 / Platter $14.49" },
-            { name: "Seafood Platter", desc: "Haddock, clams, shrimp, and scallops with fries or mash.", price: "Small $29.99 / Large $39.99" },
-            { name: "Japchae", desc: "Korean glass noodles stir-fried with vegetables.", price: "$14.49" }
+            { name: "BBQ Bacon Swiss Burger", desc: "Juicy burger with BBQ sauce, bacon, and Swiss cheese.", price: "Burger $10.99 / Platter $15.99" },
+            { name: "Seafood Platter", desc: "Haddock, clams, shrimp, and scallops with fries or mash.", price: "Small $31.99 / Large $42.99" },
+            { name: "Japchae", desc: "Korean glass noodles stir-fried with vegetables.", price: "$15.49" }
         ];
 
         function getRandomItems(arr, count) {
@@ -303,6 +362,28 @@ document.addEventListener("DOMContentLoaded", () => {
         L.marker(dinerCoords).addTo(map)
             .bindPopup("<b>Diner 81</b><br>124 King Street, Saint Stephen<br><a target='_blank' href='https://www.google.com/maps/dir/?api=1&destination=45.19771,-67.27468'>Find Location</a>")
             .openPopup();
+
+        // 🆕 Updated Menu Popup
+        const MENU_UPDATE_VERSION = "2026-09-16";
+        const menuPopup = document.getElementById("menuUpdatePopup");
+        const closeMenuPopup = document.getElementById("closeMenuPopup");
+        const dontShowMenuPopup = document.getElementById("dontShowMenuPopup");
+
+        if (localStorage.getItem("menuUpdateVersion") === MENU_UPDATE_VERSION) {
+            menuPopup.style.display = "none";
+        }
+
+        closeMenuPopup.addEventListener("click", function () {
+            menuPopup.style.display = "none";
+        });
+
+        dontShowMenuPopup.addEventListener("change", function () {
+            if (this.checked) {
+                localStorage.setItem("menuUpdateVersion", MENU_UPDATE_VERSION);
+                menuPopup.style.display = "none";
+            }
+        });
+
         // 월드컵 팝업 닫기 기능
 //document.getElementById('closePopup').addEventListener('click', function() {
     //document.getElementById('worldCupPopup').style.display = 'none';
