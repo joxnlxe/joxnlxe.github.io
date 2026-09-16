@@ -4,54 +4,99 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Korean Cuisine - Diner 81</title>
+    <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f8f8;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #2c2c2c, #444);
+      color: #fff;
+      padding: 1.5rem 0;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+    }
+
+    .back-button {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #555;
+      color: #fff;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .back-button:hover {
+      background: #777;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin: 2rem auto;
+    }
+
+    .menu-section-title {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      color: #444;
+      font-weight: 600;
+    }
+
+    .menu-item {
+      background: #fff;
+      padding: 1rem;
+      margin-bottom: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .menu-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .menu-item img {
+      width: 100%;
+      border-radius: 8px;
+      display: block;
+    }
+
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="menu-header">
+  <header>
     <button class="back-button" onclick="window.location.href='allmenu.html';">← Back</button>
-    <h1>Korean Cuisine - Diner 81</h1>
+    <h1>Korean Menu!</h1>
   </header>
 
-  <main>
-    <!-- Special Korean Combo -->
-    <section class="menu-section">
-      <div class="container">
-        <h2 class="section-title">🔥 Special Korean Menu</h2>
-        <div class="menu-grid">
-          <div class="menu-card"><h3>Daily Lunch Special No.1</h3><p>6" Sub + Fries + 2pc Spring Rolls + 2pc Mandu + Drink<br><b>$16.99</b></p></div>
-          <div class="menu-card"><h3>Daily Lunch Special No.2</h3><p>6" Sub + Fries + Soup (Fish Chowder or Turkey Veg) + Drink<br><b>$16.99</b></p></div>
-          <div class="menu-card"><h3>Combo No.1</h3><p>Korean BBQ + Japchae + 2pc Mandu or Spring Rolls + Drink<br><b>$23.99</b></p></div>
-          <div class="menu-card"><h3>Combo No.2</h3><p>Korean BBQ + Japchae + Popcorn Chicken + Drink<br><b>$24.99</b></p></div>
-          <div class="menu-card"><h3>Combo No.3</h3><p>Korean BBQ + 2pc Mandu or Spring Rolls + Popcorn Chicken + Drink<br><b>$24.99</b></p></div>
-          <div class="menu-card"><h3>Combo No.4</h3><p>Korean BBQ + Japchae + 2pc Mandu or Spring Rolls + Popcorn Chicken + Drink<br><b>$27.99</b></p></div>
-        </div>
-      </div>
-    </section>
+  <div class="container">
 
-    <!-- Regular Korean Menu -->
-    <section class="menu-section">
-      <div class="container">
-        <h2 class="section-title">🥢 Korean Regular Menu</h2>
-        <div class="menu-grid">
-          <div class="menu-card"><h3>Bibimbap</h3><p>Vegetables & fried egg over rice with Gochujang.<br><b>$14.99</b> (+Meat $4.99)</p></div>
-          <div class="menu-card"><h3>Korean BBQ</h3><p>Stir-fried pork with rice (Teriyaki/Spicy).<br><b>$19.99</b> (+Meat $4.99, +Rice $3.29)</p></div>
-          <div class="menu-card"><h3>Chicken Dupbap</h3><p>Fried chicken in sweet soy sauce over rice.<br><b>$16.99</b></p></div>
-          <div class="menu-card"><h3>Tangsuyuk</h3><p>Crispy pork with sweet & sour sauce.<br><b>$24.99</b></p></div>
-          <div class="menu-card"><h3>Tteokbokki</h3><p>Rice cakes in spicy sauce with Mandu.<br><b>Small $12.99</b> | <b>Large $19.99</b></p></div>
-          <div class="menu-card"><h3>Teppan Yaki</h3><p>Pork & vegetables stir-fried with noodles (Teriyaki/Spicy).<br><b>$19.99</b></p></div>
-          <div class="menu-card"><h3>Japchae</h3><p>Glass noodles with vegetables.<br><b>$14.49</b> (+Meat $4.99)</p></div>
-          <div class="menu-card"><h3>Ramyun</h3><p>Korean ramen with 2pc Mandu & Egg (Kimchi or BBQ).<br><b>$14.99</b> (+Rice $3.29)</p></div>
-          <div class="menu-card"><h3>Popcorn Chicken</h3><p>Sweet & Spicy Korean-style chicken.<br><b>Small $13.99</b> | <b>Large $18.99</b></p></div>
-          <div class="menu-card"><h3>Fried Mandu</h3><p>Crispy pork dumplings.<br><b>5pc $8.99</b> | <b>10pc $15.49</b></p></div>
-          <div class="menu-card"><h3>Tempura Shrimp</h3><p>Deep-fried shrimp.<br><b>6pc $12.99</b> | <b>10pc $18.99</b></p></div>
-          <div class="menu-card"><h3>Spring Rolls</h3><p>Vegetable spring rolls.<br><b>7pc $8.99</b> | <b>15pc $15.49</b></p></div>
-        </div>
-      </div>
-    </section>
-  </main>
+    <div class="menu-item"><img src="diner7men.jpg" alt="Korean Dishes"></div>
+
+  </div>
 
   <footer>
-    <p>&copy; 2025 Diner 81. All rights reserved.</p>
+    <p>&copy; 2026 Diner 81. All rights reserved.</p>
   </footer>
 </body>
 </html>
