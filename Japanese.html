@@ -4,92 +4,100 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Japanese Cuisine - Diner 81</title>
+    <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f8f8;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #2c2c2c, #444);
+      color: #fff;
+      padding: 1.5rem 0;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+    }
+
+    .back-button {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #555;
+      color: #fff;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .back-button:hover {
+      background: #777;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin: 2rem auto;
+    }
+
+    .menu-section-title {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      color: #444;
+      font-weight: 600;
+    }
+
+    .menu-item {
+      background: #fff;
+      padding: 1rem;
+      margin-bottom: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .menu-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .menu-item img {
+      width: 100%;
+      border-radius: 8px;
+      display: block;
+    }
+
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="menu-header">
+  <header>
     <button class="back-button" onclick="window.location.href='allmenu.html';">← Back</button>
-    <h1>Japanese Cuisine - Diner 81</h1>
+    <h1>Japanese Menu!</h1>
   </header>
 
-  <main>
-    <!-- Special Rolls -->
-    <section class="menu-section">
-      <div class="container">
-        <h2 class="section-title">🍣 Special Rolls</h2>
-        <div class="menu-grid">
-          <div class="menu-card"><img src="rainbow.png" alt="Rainbow Roll"><h3>Rainbow</h3><p>Crabstick, Avocado, Cucumber Topped with Tuna, Salmon, Avocado, Shrimp.<br><b>$17.99</b></p></div>
-          <div class="menu-card"><img src="boston.png" alt="Boston Roll"><h3>Boston</h3><p>Salmon & Avocado Topped with Masago and Shrimp.<br><b>$17.99</b></p></div>
-          <div class="menu-card"><img src="boston-night.png" alt="Boston Night Roll"><h3>Boston Night</h3><p>Tuna & Avocado Topped with Tobiko & Shrimp.<br><b>$18.99</b></p></div>
-          <div class="menu-card"><img src="dragon.png" alt="Dragon Roll"><h3>Dragon</h3><p>Shrimp Tempura, Crabstick, Avocado, Cucumber Topped with Eel & Sauce.<br><b>$17.99</b></p></div>
-          <div class="menu-card"><img src="greendragon.png" alt="Green Dragon Roll"><h3>Green Dragon</h3><p>Shrimp Tempura, Crabstick, Avocado, Cucumber Topped with Avocado.<br><b>$17.99</b></p></div>
-          <div class="menu-card"><img src="reddragon.png" alt="Red Dragon Roll"><h3>Red Dragon</h3><p>Shrimp Tempura, Crabstick, Avocado, Cucumber Topped with Tuna & Eel Sauce.<br><b>$19.99</b></p></div>
-          <div class="menu-card"><img src="stay.png" alt="Crazy Dragon Roll"><h3>Crazy Dragon</h3><p>Shrimp Tempura, Crabstick, Avocado, Cucumber Topped with Salmon & Sauce.<br><b>$18.99</b></p></div>
-          <div class="menu-card"><img src="garlic-dragon.png" alt="Garlic Dragon Roll"><h3>Garlic Dragon</h3><p>Shrimp Tempura, Crabstick, Avocado, Cucumber with Torched Garlic Mayo & Crunch.<br><b>$19.99</b></p></div>
-          <div class="menu-card"><img src="salmon-on-the-beach.png" alt="Salmon On the Beach Roll"><h3>Salmon On the Beach</h3><p>Crabstick, Avocado, Cucumber, Cream Cheese Topped with Torched Salmon & Honey.<br><b>$17.99</b></p></div>
-          <div class="menu-card"><img src="saint.png" alt="Saint Roll"><h3>Saint</h3><p>Deep-fried Crabstick Roll Topped with Spicy Crab Salad & Sauces.<br><b>$15.99</b></p></div>
-          <div class="menu-card"><img src="stay.png" alt="Stephen Roll"><h3>Stephen</h3><p>Deep-fried Tempura Roll with Crabstick & Cream Cheese, Topped with Crunch & Mayo.<br><b>$17.99</b></p></div>
-          <div class="menu-card"><img src="diner81.png" alt="Diner 81 Roll"><h3>Diner 81</h3><p>Crabstick, Avocado, Cucumber Topped with Spicy Tuna, Salmon & Crunch.<br><b>$19.99</b></p></div>
-          <div class="menu-card"><img src="stay.png" alt="Volcano Roll"><h3>Volcano</h3><p>Shrimp Tempura & Crab Salad Topped with Torched Garlic Mayo & Crunch.<br><b>$18.99</b></p></div>
-          <div class="menu-card"><img src="stay.png" alt="White Tiger Roll"><h3>White Tiger</h3><p>Shrimp Tempura, Crab Salad & Cream Cheese Topped with Crabstick & Crunch.<br><b>$18.99</b></p></div>
-          <div class="menu-card"><img src="stay.png" alt="Chef's Special Roll"><h3>Chef's Special</h3><p>Tempura Shrimp, Spicy Crab Salad & Avocado Topped with Torched Salmon & Fried Onion.<br><b>$20.99</b></p></div>
-        </div>
-      </div>
-    </section>
+  <div class="container">
 
-    <!-- Regular Rolls -->
-    <section class="menu-section">
-      <div class="container">
-        <h2 class="section-title">🍥 Regular Rolls</h2>
-        <div class="menu-grid">
-          <div class="menu-card"><h3>Avocado</h3><p>Just Avocado.<br><b>$8.99</b></p></div>
-          <div class="menu-card"><h3>Cucumber</h3><p>Just Cucumber.<br><b>$7.99</b></p></div>
-          <div class="menu-card"><h3>California</h3><p>Crabstick, Avocado, Cucumber.<br><b>$8.99</b></p></div>
-          <div class="menu-card"><h3>Spicy California</h3><p>California Roll with Spicy Mayo.<br><b>$9.99</b></p></div>
-          <div class="menu-card"><h3>Salmon</h3><p>Just Salmon.<br><b>$9.99</b></p></div>
-          <div class="menu-card"><h3>Spicy Salmon</h3><p>Salmon & Cucumber with Spicy Mayo.<br><b>$10.99</b></p></div>
-          <div class="menu-card"><h3>Spicy Tuna</h3><p>Spicy Tuna & Cucumber with Spicy Mayo.<br><b>$12.99</b></p></div>
-          <div class="menu-card"><h3>Crunch</h3><p>Crab Salad, Avocado & Cucumber with Fried Onions.<br><b>$11.99</b></p></div>
-          <div class="menu-card"><h3>Spicy Crab</h3><p>Spicy Crab Salad, Cucumber & Avocado with Crunch.<br><b>$10.99</b></p></div>
-          <div class="menu-card"><h3>Dynamite</h3><p>Shrimp Tempura & Crabstick with Tobiko & Eel Sauce.<br><b>$14.99</b></p></div>
-          <div class="menu-card"><h3>Philadelphia</h3><p>Crabstick, Avocado & Cucumber with Cream Cheese & Salmon.<br><b>$11.99</b></p></div>
-          <div class="menu-card"><h3>Yam Tempura</h3><p>Sweet Potato Tempura & Avocado with Eel Sauce.<br><b>$11.99</b></p></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Nigiri -->
-    <section class="menu-section">
-      <div class="container">
-        <h2 class="section-title">🍤 Nigiri (2 pcs)</h2>
-        <div class="menu-grid">
-          <div class="menu-card"><h3>Salmon</h3><p><b>$5.99</b></p></div>
-          <div class="menu-card"><h3>Tuna</h3><p><b>$6.99</b></p></div>
-          <div class="menu-card"><h3>Eel</h3><p><b>$6.99</b></p></div>
-          <div class="menu-card"><h3>Crabstick</h3><p><b>$4.99</b></p></div>
-          <div class="menu-card"><h3>Shrimp</h3><p><b>$5.99</b></p></div>
-          <div class="menu-card"><h3>Tamago</h3><p><b>$4.99</b></p></div>
-          <div class="menu-card"><h3>Inari</h3><p><b>$4.99</b></p></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Party Trays -->
-    <section class="menu-section">
-      <div class="container">
-        <h2 class="section-title">🎉 Party Trays</h2>
-        <div class="menu-grid">
-          <div class="menu-card"><h3>Tray A</h3><p>40 pcs Nigiri, Avocado, Salmon, California, Dynamite Rolls.<br><b>$59.99</b></p></div>
-          <div class="menu-card"><h3>Tray B</h3><p>48 pcs Nigiri, Salmon, California, Dynamite, Crunch Rolls.<br><b>$84.99</b></p></div>
-          <div class="menu-card"><h3>Tray C</h3><p>64 pcs Assorted Rolls (Avocado, Salmon, Crazy Dragon).<br><b>$95.99</b></p></div>
-          <div class="menu-card"><h3>Tray D</h3><p>80 pcs Assorted Rolls (Spicy Tuna, Philadelphia, Stephen).<br><b>$119.99</b></p></div>
-        </div>
-      </div>
-    </section>
-  </main>
+    <div class="menu-item"><img src="diner8men.jpg" alt="Sushi 1"></div>
+    <div class="menu-item"><img src="diner9men.jpg" alt="Sushi 2"></div>
+    <div class="menu-item"><img src="diner10men.jpg" alt="Sushi 3"></div>
+  </div>
 
   <footer>
-    <p>&copy; 2025 Diner 81. All rights reserved.</p>
+    <p>&copy; 2026 Diner 81. All rights reserved.</p>
   </footer>
 </body>
 </html>
